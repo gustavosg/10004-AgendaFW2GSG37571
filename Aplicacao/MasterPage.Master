@@ -1,0 +1,38 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs"
+    Inherits="System.Aplicacao.MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class=page>
+    <div class="title">
+                <h1>
+                    Trabalho Framework Web2 - Session
+                </h1>
+                </div>
+    <div class="clear hideSkiplink">
+        <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false"
+                    IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Views/Tarefas/CadTarefas.aspx" Text="Cadastro de Tarefas" Value="Cadastro de Tarefas" />
+                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="Sobre" />
+                    </Items>
+                </asp:Menu>
+    </div>
+    <div class="main">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat=server></asp:ContentPlaceHolder>
+    </div>
+      <div class="footer">
+    </div>
+
+</div>
+    </form>
+</body>
+</html>

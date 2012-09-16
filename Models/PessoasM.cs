@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Data.Util;
 
 namespace Data.Models
 {
-    public class PessoasM
+    public class PessoasM : Singleton<PessoasM>
     {
 
         #region Properties

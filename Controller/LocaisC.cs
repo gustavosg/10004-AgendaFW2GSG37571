@@ -8,11 +8,10 @@ namespace Data.Controller
     {
         LocaisM locais = LocaisM.GetSingleton();
 
-        public void Salvar(Int16 id, String nome)
+        public void Salvar(String nome)
         {
             if (locais == null){
                 locais = new LocaisM();
-                locais.id = id;
                 locais.nome = nome;
             }
         }

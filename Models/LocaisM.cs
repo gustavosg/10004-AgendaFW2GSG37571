@@ -21,7 +21,7 @@ namespace Data.Models
 
         public void InserirBD()
         {
-
+            
         }
 
         #endregion

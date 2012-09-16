@@ -1,0 +1,11 @@
+D:\Projetos\Visual Studio 2010\Projects\AgendaFW2GSG37571\Aplicacao\bin\AgendaFW2GSG37571.System.Aplicacao.dll
+D:\Projetos\Visual Studio 2010\Projects\AgendaFW2GSG37571\Aplicacao\bin\AgendaFW2GSG37571.System.Aplicacao.pdb
+D:\Projetos\Visual Studio 2010\Projects\AgendaFW2GSG37571\Aplicacao\obj\Debug\AgendaFW2GSG37571.System.Aplicacao.dll
+D:\Projetos\Visual Studio 2010\Projects\AgendaFW2GSG37571\Aplicacao\obj\Debug\AgendaFW2GSG37571.System.Aplicacao.pdb
+D:\Projetos\Visual Studio 2010\Projects\AgendaFW2GSG37571\Aplicacao\obj\Debug\Aplicacao.csprojResolveAssemblyReference.cache
+D:\Projetos\Visual Studio 2010\Projects\AgendaFW2GSG37571\Aplicacao\bin\AgendaFW2GSG37571.Data.Controller.dll
+D:\Projetos\Visual Studio 2010\Projects\AgendaFW2GSG37571\Aplicacao\bin\AgendaFW2GSG37571.Data.Util.dll
+D:\Projetos\Visual Studio 2010\Projects\AgendaFW2GSG37571\Aplicacao\bin\AgendaFW2GSG37571.Data.Models.dll
+D:\Projetos\Visual Studio 2010\Projects\AgendaFW2GSG37571\Aplicacao\bin\AgendaFW2GSG37571.Data.Controller.pdb
+D:\Projetos\Visual Studio 2010\Projects\AgendaFW2GSG37571\Aplicacao\bin\AgendaFW2GSG37571.Data.Util.pdb
+D:\Projetos\Visual Studio 2010\Projects\AgendaFW2GSG37571\Aplicacao\bin\AgendaFW2GSG37571.Data.Models.pdb
