@@ -1,0 +1,5 @@
+C:\Users\Gustavo\Documents\Visual Studio 2010\Projects\AgendaFW2GSG37571\DataConection\bin\Debug\AgendaFW2GSG37571.Data.DataConnection.dll
+C:\Users\Gustavo\Documents\Visual Studio 2010\Projects\AgendaFW2GSG37571\DataConection\bin\Debug\AgendaFW2GSG37571.Data.DataConnection.pdb
+C:\Users\Gustavo\Documents\Visual Studio 2010\Projects\AgendaFW2GSG37571\DataConection\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Gustavo\Documents\Visual Studio 2010\Projects\AgendaFW2GSG37571\DataConection\obj\Debug\AgendaFW2GSG37571.Data.DataConnection.dll
+C:\Users\Gustavo\Documents\Visual Studio 2010\Projects\AgendaFW2GSG37571\DataConection\obj\Debug\AgendaFW2GSG37571.Data.DataConnection.pdb

@@ -1,0 +1,7 @@
+C:\Users\Gustavo\Documents\Visual Studio 2010\Projects\AgendaFW2GSG37571\Controller\bin\Debug\AgendaFW2GSG37571.Data.Controller.dll
+C:\Users\Gustavo\Documents\Visual Studio 2010\Projects\AgendaFW2GSG37571\Controller\bin\Debug\AgendaFW2GSG37571.Data.Controller.pdb
+C:\Users\Gustavo\Documents\Visual Studio 2010\Projects\AgendaFW2GSG37571\Controller\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Gustavo\Documents\Visual Studio 2010\Projects\AgendaFW2GSG37571\Controller\obj\Debug\AgendaFW2GSG37571.Data.Controller.dll
+C:\Users\Gustavo\Documents\Visual Studio 2010\Projects\AgendaFW2GSG37571\Controller\obj\Debug\AgendaFW2GSG37571.Data.Controller.pdb
+C:\Users\Gustavo\Documents\Visual Studio 2010\Projects\AgendaFW2GSG37571\Controller\bin\Debug\AgendaFW2GSG37571.Data.Models.dll
+C:\Users\Gustavo\Documents\Visual Studio 2010\Projects\AgendaFW2GSG37571\Controller\bin\Debug\AgendaFW2GSG37571.Data.Models.pdb
