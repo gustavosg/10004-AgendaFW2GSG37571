@@ -6,13 +6,20 @@ namespace Data.Controller
 {
     public class LocaisC : Singleton<LocaisC>
     {
+        #region Fields
+
         LocaisM locais = LocaisM.GetSingleton();
+
+        #endregion
+
+        #region Methods
 
         public void Salvar(String nome)
         {
             if (locais == null){
                 locais = new LocaisM();
                 locais.nome = nome;
+                locais.InserirBD();
             }
         }
 
@@ -20,5 +27,7 @@ namespace Data.Controller
         {
 
         }
+
+        #endregion
     }
 }

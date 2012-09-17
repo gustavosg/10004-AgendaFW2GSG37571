@@ -77,6 +77,13 @@
       <DependentUpon>MasterPage.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Index\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Index\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Locais\CadLocais.aspx.cs">
       <DependentUpon>CadLocais.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -103,6 +110,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Styles\Site.css" />
+    <Content Include="Views\Index\Index.aspx" />
     <Content Include="Views\Locais\CadLocais.aspx" />
     <Content Include="Views\Pessoas\CadPessoas.aspx" />
     <Content Include="Views\Tarefas\CadTarefas.aspx" />

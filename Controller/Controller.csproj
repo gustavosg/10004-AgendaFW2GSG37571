@@ -43,6 +43,7 @@
     <Compile Include="PessoasC.cs" />
     <Compile Include="LocaisC.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TarefasC.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Models\Models.csproj">

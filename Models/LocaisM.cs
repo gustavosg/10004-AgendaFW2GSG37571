@@ -14,7 +14,6 @@ namespace Data.Models
         public Int16 id { get; set; }
         public String nome { get; set; }
 
-
         #endregion
 
         #region Methods
