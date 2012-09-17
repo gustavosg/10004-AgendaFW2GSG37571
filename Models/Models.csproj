@@ -46,6 +46,10 @@
     <Compile Include="TarefasM.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DataConection\DataConnection.csproj">
+      <Project>{8853DB4D-CA7B-451F-B616-6347261B2695}</Project>
+      <Name>DataConnection</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Util\Util.csproj">
       <Project>{5668BE43-061F-4FD2-AE08-ED9742E23309}</Project>
       <Name>Util</Name>

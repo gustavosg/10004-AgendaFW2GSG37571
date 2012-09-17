@@ -16,6 +16,7 @@ namespace Data.Controller
                 pessoas.nome = nome;
                 pessoas.sexo = sexo;
                 pessoas.idade = idade;
+                
             }
         }
 
