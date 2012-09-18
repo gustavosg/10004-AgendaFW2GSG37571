@@ -31,11 +31,39 @@
             <div class="clear hideSkiplink">
                 <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
                     <Items>
+                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home"/>
                         <asp:MenuItem Text="Cadastros" Value="Cadastros">
+                            <asp:MenuItem NavigateUrl="~/Views/Pessoas/CadPessoas.aspx" Text="Pessoas" 
+                                Value="Pessoas"></asp:MenuItem>
                             <asp:MenuItem NavigateUrl="~/Views/Tarefas/CadTarefas.aspx" Text="Tarefas" 
                                 Value="Tarefas"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Views/Locais/CadLocais.aspx" Text="Locais" 
+                                Value="Locais"></asp:MenuItem>
                         </asp:MenuItem>
-                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home"/>
+                        <asp:MenuItem Text="Edição" Value="Edição">
+                            <asp:MenuItem NavigateUrl="~/Views/Pessoas/EdPessoas.aspx" Text="Pessoas" 
+                                Value="Pessoas"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Views/Tarefas/EdTarefas.aspx" Text="Tarefas" 
+                                Value="Tarefas"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Views/Locais/EdLocais.aspx" Text="Locais" 
+                                Value="Locais"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Excluir" Value="Excluir">
+                            <asp:MenuItem NavigateUrl="~/Views/Pessoas/ExcPessoas.aspx" Text="Pessoas" 
+                                Value="Pessoas"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Views/Tarefas/ExcTarefas.aspx" Text="Tarefas" 
+                                Value="Tarefas"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Views/Locais/ExcLocais.aspx" Text="Locais" 
+                                Value="Locais"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Relatórios" Value="Relatórios">
+                            <asp:MenuItem NavigateUrl="~/Views/Pessoas/RelPessoas.aspx" Text="Pessoas" 
+                                Value="Pessoas"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Views/Tarefas/RelTarefas.aspx" Text="Tarefas" 
+                                Value="Tarefas"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Views/Locais/RelLocais.aspx" Text="Locais" 
+                                Value="Locais"></asp:MenuItem>
+                        </asp:MenuItem>
                         <asp:MenuItem NavigateUrl="~/About.aspx" Text="About"/>
                     </Items>
                 </asp:Menu>

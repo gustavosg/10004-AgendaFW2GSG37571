@@ -14,3 +14,6 @@ D:\Projetos\Visual Studio\2010\Projects\AgendaFW2GSG37571\DataConection\bin\Debu
 D:\Projetos\Visual Studio\2010\Projects\AgendaFW2GSG37571\DataConection\obj\Debug\DataConnection.csprojResolveAssemblyReference.cache
 D:\Projetos\Visual Studio\2010\Projects\AgendaFW2GSG37571\DataConection\obj\Debug\AgendaFW2GSG37571.Data.DataConnection.dll
 D:\Projetos\Visual Studio\2010\Projects\AgendaFW2GSG37571\DataConection\obj\Debug\AgendaFW2GSG37571.Data.DataConnection.pdb
+D:\Projetos\Visual Studio 2010\Projects\AgendaFW2GSG37571\DataConection\bin\Debug\AgendaFW2GSG37571.Data.Util.dll
+D:\Projetos\Visual Studio 2010\Projects\AgendaFW2GSG37571\DataConection\bin\Debug\AgendaFW2GSG37571.Data.Util.pdb
+D:\Projetos\Visual Studio 2010\Projects\AgendaFW2GSG37571\DataConection\obj\Debug\DataConnection.csprojResolveAssemblyReference.cache

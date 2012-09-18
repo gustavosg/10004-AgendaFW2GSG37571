@@ -1,8 +1,11 @@
-﻿using System;
+﻿#region References
+
+using System;
 using Data.Util;
 using Data.DataConnection;
 using System.Data.SqlClient;
 
+#endregion
 
 namespace Data.Models
 {
@@ -53,14 +56,23 @@ namespace Data.Models
 
         }
 
-        public void Inserir()
+        public Boolean Inserir()
         {
             String query = "INSERT INTO PESSOAS (nome, senha, sexo, idade) VALUES (" + this.nome + ", " + this.senha + ", " + this.sexo + ", " + this.idade + ")";
-            SqlConnection conexao = connection.OpenConnection();
-            SqlCommand comando = new SqlCommand(query, conexao);
-
-            connection.CloseConnection(conexao);
-
+            
+            try
+            {
+                SqlConnection conexao = connection.OpenConnection();
+                SqlCommand comando = new SqlCommand(query, conexao);
+                comando.ExecuteNonQuery();
+                connection.CloseConnection(conexao);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+                throw;
+            }
         }
 
         public void Editar()
@@ -99,7 +111,6 @@ namespace Data.Models
 
             return dr;
         }
-
 
         #endregion
     }

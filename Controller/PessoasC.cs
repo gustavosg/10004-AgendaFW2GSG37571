@@ -17,21 +17,45 @@ namespace Data.Controller
             return pessoas.Login();
         }
 
-        public void Salvar(String nome, Char sexo, Int16 idade)
+        /// <summary>
+        /// Grava uma nova Pessoa
+        /// </summary>
+        /// <param name="nome"></param>
+        /// <param name="senha"></param>
+        /// <param name="sexo"></param>
+        /// <param name="idade"></param>
+        public Boolean Salvar(String nome, String senha, Char sexo, Int16 idade)
         {
-            if (pessoas == null)
-            {
-                pessoas = new PessoasM();
+            pessoas.nome = nome;
+            pessoas.senha = senha;
+            pessoas.sexo = sexo;
+            pessoas.idade = idade;
 
-                pessoas.nome = nome;
-                pessoas.sexo = sexo;
-                pessoas.idade = idade;
+            return pessoas.Inserir();
 
-            }
         }
 
+        /// <summary>
+        /// Exclui uma pessoa do sistema
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="nome"></param>
         public void Excluir(Int16 id = 0, String nome = "")
         {
+            String option = String.Empty;
+
+            if (id != 0)
+            {
+                pessoas.id = id;
+                option = "id";
+            }
+            if (!nome.Equals(String.Empty))
+            {
+                pessoas.nome = nome;
+                option = "nome";
+            }
+
+            pessoas.Excluir(option);
 
         }
     }

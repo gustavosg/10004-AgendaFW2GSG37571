@@ -62,7 +62,18 @@
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Views\Locais\CadLocais.aspx" />
+    <Content Include="Views\Locais\EdLocais.aspx" />
+    <Content Include="Views\Locais\ExcLocais.aspx" />
+    <Content Include="Views\Locais\RelLocais.aspx" />
+    <Content Include="Views\Pessoas\CadPessoas.aspx" />
+    <Content Include="Views\Pessoas\EdPessoas.aspx" />
+    <Content Include="Views\Pessoas\ExcPessoas.aspx" />
+    <Content Include="Views\Pessoas\RelPessoas.aspx" />
     <Content Include="Views\Tarefas\CadTarefas.aspx" />
+    <Content Include="Views\Tarefas\EdTarefas.aspx" />
+    <Content Include="Views\Tarefas\ExcTarefas.aspx" />
+    <Content Include="Views\Tarefas\RelTarefas.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -125,6 +136,62 @@
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
+    <Compile Include="Views\Locais\CadLocais.aspx.cs">
+      <DependentUpon>CadLocais.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Locais\CadLocais.aspx.designer.cs">
+      <DependentUpon>CadLocais.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Locais\EdLocais.aspx.cs">
+      <DependentUpon>EdLocais.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Locais\EdLocais.aspx.designer.cs">
+      <DependentUpon>EdLocais.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Locais\ExcLocais.aspx.cs">
+      <DependentUpon>ExcLocais.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Locais\ExcLocais.aspx.designer.cs">
+      <DependentUpon>ExcLocais.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Locais\RelLocais.aspx.cs">
+      <DependentUpon>RelLocais.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Locais\RelLocais.aspx.designer.cs">
+      <DependentUpon>RelLocais.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pessoas\CadPessoas.aspx.cs">
+      <DependentUpon>CadPessoas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Pessoas\CadPessoas.aspx.designer.cs">
+      <DependentUpon>CadPessoas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pessoas\EdPessoas.aspx.cs">
+      <DependentUpon>EdPessoas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Pessoas\EdPessoas.aspx.designer.cs">
+      <DependentUpon>EdPessoas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pessoas\ExcPessoas.aspx.cs">
+      <DependentUpon>ExcPessoas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Pessoas\ExcPessoas.aspx.designer.cs">
+      <DependentUpon>ExcPessoas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pessoas\RelPessoas.aspx.cs">
+      <DependentUpon>RelPessoas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Pessoas\RelPessoas.aspx.designer.cs">
+      <DependentUpon>RelPessoas.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Tarefas\CadTarefas.aspx.cs">
       <DependentUpon>CadTarefas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -132,10 +199,30 @@
     <Compile Include="Views\Tarefas\CadTarefas.aspx.designer.cs">
       <DependentUpon>CadTarefas.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\Tarefas\EdTarefas.aspx.cs">
+      <DependentUpon>EdTarefas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Tarefas\EdTarefas.aspx.designer.cs">
+      <DependentUpon>EdTarefas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Tarefas\ExcTarefas.aspx.cs">
+      <DependentUpon>ExcTarefas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Tarefas\ExcTarefas.aspx.designer.cs">
+      <DependentUpon>ExcTarefas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Tarefas\RelTarefas.aspx.cs">
+      <DependentUpon>RelTarefas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Tarefas\RelTarefas.aspx.designer.cs">
+      <DependentUpon>RelTarefas.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Pessoas\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Account\Web.config" />
