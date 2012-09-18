@@ -29,18 +29,27 @@ namespace Data.Models
         public Boolean Login()
         {
 
-            String query = "SELECT * FROM PESSOAS where nome = " + this.nome + "and senha = " + this.senha;
+            String query = "SELECT * FROM PESSOAS WHERE nome = '" + this.nome + "'  AND senha = '" + this.senha +"'";
             SqlConnection conexao = connection.OpenConnection();
             SqlCommand comando = new SqlCommand(query, conexao);
+            SqlDataReader dr;
+            Boolean teste = false;
+            try
+            {
+                dr = comando.ExecuteReader();
+                
+                teste = dr.HasRows;
 
-            SqlDataReader dr = comando.ExecuteReader();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
 
             connection.CloseConnection(conexao);
 
-            if (dr.HasRows)
-                return true;
-            else
-                return false;
+            return teste;
 
         }
 

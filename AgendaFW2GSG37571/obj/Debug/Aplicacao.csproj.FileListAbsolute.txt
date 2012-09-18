@@ -1,5 +1,0 @@
-D:\Projetos\Visual Studio 2010\Projects\AgendaFW2GSG37571\AgendaFW2GSG37571\bin\AgendaFW2GSG37571.Data.Aplicacao.dll
-D:\Projetos\Visual Studio 2010\Projects\AgendaFW2GSG37571\AgendaFW2GSG37571\bin\AgendaFW2GSG37571.Data.Aplicacao.pdb
-D:\Projetos\Visual Studio 2010\Projects\AgendaFW2GSG37571\AgendaFW2GSG37571\obj\Debug\Aplicacao.csprojResolveAssemblyReference.cache
-D:\Projetos\Visual Studio 2010\Projects\AgendaFW2GSG37571\AgendaFW2GSG37571\obj\Debug\AgendaFW2GSG37571.Data.Aplicacao.dll
-D:\Projetos\Visual Studio 2010\Projects\AgendaFW2GSG37571\AgendaFW2GSG37571\obj\Debug\AgendaFW2GSG37571.Data.Aplicacao.pdb

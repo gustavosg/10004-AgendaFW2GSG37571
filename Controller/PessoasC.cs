@@ -11,25 +11,22 @@ namespace Data.Controller
 
         public Boolean login(String nome, String senha)
         {
-            if (pessoas == null)
-            {
-                pessoas = new PessoasM();
-                pessoas.nome = nome;
-                pessoas.senha = senha;
-            }
+            pessoas.nome = nome;
+            pessoas.senha = senha;
 
             return pessoas.Login();
         }
 
         public void Salvar(String nome, Char sexo, Int16 idade)
         {
-            if (pessoas == null){
+            if (pessoas == null)
+            {
                 pessoas = new PessoasM();
-                
+
                 pessoas.nome = nome;
                 pessoas.sexo = sexo;
                 pessoas.idade = idade;
-                
+
             }
         }
 

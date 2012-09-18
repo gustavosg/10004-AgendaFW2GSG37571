@@ -1,5 +1,0 @@
-C:\Users\Gustavo\Documents\Visual Studio 2010\Projects\AgendaFW2GSG37571\AgendaFW2GSG37571\bin\AgendaFW2GSG37571.dll
-C:\Users\Gustavo\Documents\Visual Studio 2010\Projects\AgendaFW2GSG37571\AgendaFW2GSG37571\bin\AgendaFW2GSG37571.pdb
-C:\Users\Gustavo\Documents\Visual Studio 2010\Projects\AgendaFW2GSG37571\AgendaFW2GSG37571\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\Gustavo\Documents\Visual Studio 2010\Projects\AgendaFW2GSG37571\AgendaFW2GSG37571\obj\Debug\AgendaFW2GSG37571.dll
-C:\Users\Gustavo\Documents\Visual Studio 2010\Projects\AgendaFW2GSG37571\AgendaFW2GSG37571\obj\Debug\AgendaFW2GSG37571.pdb

@@ -7,3 +7,7 @@ D:\Projetos\Visual Studio 2010\Projects\AgendaFW2GSG37571\Util\bin\Debug\AgendaF
 D:\Projetos\Visual Studio 2010\Projects\AgendaFW2GSG37571\Util\bin\Debug\AgendaFW2GSG37571.Data.Util.pdb
 D:\Projetos\Visual Studio 2010\Projects\AgendaFW2GSG37571\Util\obj\Debug\AgendaFW2GSG37571.Data.Util.dll
 D:\Projetos\Visual Studio 2010\Projects\AgendaFW2GSG37571\Util\obj\Debug\AgendaFW2GSG37571.Data.Util.pdb
+D:\Projetos\Visual Studio\2010\Projects\AgendaFW2GSG37571\Util\bin\Debug\AgendaFW2GSG37571.Data.Util.dll
+D:\Projetos\Visual Studio\2010\Projects\AgendaFW2GSG37571\Util\bin\Debug\AgendaFW2GSG37571.Data.Util.pdb
+D:\Projetos\Visual Studio\2010\Projects\AgendaFW2GSG37571\Util\obj\Debug\AgendaFW2GSG37571.Data.Util.dll
+D:\Projetos\Visual Studio\2010\Projects\AgendaFW2GSG37571\Util\obj\Debug\AgendaFW2GSG37571.Data.Util.pdb

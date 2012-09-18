@@ -14,3 +14,14 @@ D:\Projetos\Visual Studio 2010\Projects\AgendaFW2GSG37571\Controller\bin\Debug\A
 D:\Projetos\Visual Studio 2010\Projects\AgendaFW2GSG37571\Controller\obj\Debug\Controller.csprojResolveAssemblyReference.cache
 D:\Projetos\Visual Studio 2010\Projects\AgendaFW2GSG37571\Controller\obj\Debug\AgendaFW2GSG37571.Data.Controller.dll
 D:\Projetos\Visual Studio 2010\Projects\AgendaFW2GSG37571\Controller\obj\Debug\AgendaFW2GSG37571.Data.Controller.pdb
+D:\Projetos\Visual Studio\2010\Projects\AgendaFW2GSG37571\Controller\bin\Debug\AgendaFW2GSG37571.Data.Controller.dll
+D:\Projetos\Visual Studio\2010\Projects\AgendaFW2GSG37571\Controller\bin\Debug\AgendaFW2GSG37571.Data.Controller.pdb
+D:\Projetos\Visual Studio\2010\Projects\AgendaFW2GSG37571\Controller\bin\Debug\AgendaFW2GSG37571.Data.Models.dll
+D:\Projetos\Visual Studio\2010\Projects\AgendaFW2GSG37571\Controller\bin\Debug\AgendaFW2GSG37571.Data.Util.dll
+D:\Projetos\Visual Studio\2010\Projects\AgendaFW2GSG37571\Controller\bin\Debug\AgendaFW2GSG37571.Data.DataConnection.dll
+D:\Projetos\Visual Studio\2010\Projects\AgendaFW2GSG37571\Controller\bin\Debug\AgendaFW2GSG37571.Data.Models.pdb
+D:\Projetos\Visual Studio\2010\Projects\AgendaFW2GSG37571\Controller\bin\Debug\AgendaFW2GSG37571.Data.Util.pdb
+D:\Projetos\Visual Studio\2010\Projects\AgendaFW2GSG37571\Controller\bin\Debug\AgendaFW2GSG37571.Data.DataConnection.pdb
+D:\Projetos\Visual Studio\2010\Projects\AgendaFW2GSG37571\Controller\obj\Debug\Controller.csprojResolveAssemblyReference.cache
+D:\Projetos\Visual Studio\2010\Projects\AgendaFW2GSG37571\Controller\obj\Debug\AgendaFW2GSG37571.Data.Controller.dll
+D:\Projetos\Visual Studio\2010\Projects\AgendaFW2GSG37571\Controller\obj\Debug\AgendaFW2GSG37571.Data.Controller.pdb

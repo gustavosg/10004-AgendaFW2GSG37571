@@ -13,19 +13,20 @@ namespace Data.Util
 
         public static T GetSingleton()
         {
-            lock (instance)
-            {
-                if (instance == null)
+            if (instance == null)
+                lock (singletonLock)
                 {
-                    Type t = typeof(T);
+                    if (instance == null)
+                    {
+                        Type t = typeof(T);
 
-                    // Confere se não tem construtores publicos...
-                    ConstructorInfo[] ctors = t.GetConstructors();
-                    if (ctors.Length > 0)
-                        instance = (T)Activator.CreateInstance(t, true);
+                        // Confere se não tem construtores publicos...
+                        ConstructorInfo[] ctors = t.GetConstructors();
+                        if (ctors.Length > 0)
+                            instance = (T)Activator.CreateInstance(t, true);
 
+                    }
                 }
-            }
 
             return instance;
         }
