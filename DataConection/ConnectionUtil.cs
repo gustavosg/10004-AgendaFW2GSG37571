@@ -17,8 +17,8 @@ namespace Data.DataConnection
         /// <returns>Connection to a DataBase</returns>
         public SqlConnection OpenConnection()
         {
-            String strConn = "Data Source=GUSTAVO-PC;Initial Catalog=AgendaFW2GSG37571;Integrated Security=True";
-            //String strConn = "Data Source=GUSTAVO-NET\\SQLExpress;Initial Catalog=AgendaFW2GSG37571;Integrated Security=True";
+            //String strConn = "Data Source=GUSTAVO-PC;Initial Catalog=AgendaFW2GSG37571;Integrated Security=True";
+            String strConn = "Data Source=GUSTAVO-NET\\SQLExpress;Initial Catalog=AgendaFW2GSG37571;Integrated Security=True";
             SqlConnection connection = new SqlConnection(strConn);
             try
             {
