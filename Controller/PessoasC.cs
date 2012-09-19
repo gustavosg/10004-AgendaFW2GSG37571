@@ -2,6 +2,8 @@
 using System.Data.Sql;
 using Data.Models;
 using Data.Util;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace Data.Controller
 {
@@ -57,6 +59,11 @@ namespace Data.Controller
 
             pessoas.Excluir(option);
 
+        }
+
+        public SqlDataReader PesquisarTodos()
+        {
+            return pessoas.ConsultarTodos();
         }
     }
 }

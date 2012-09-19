@@ -23,6 +23,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <FilesToIncludeForPublish>AllFilesInTheProject</FilesToIncludeForPublish>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -232,6 +233,10 @@
     <ProjectReference Include="..\Controller\Controller.csproj">
       <Project>{9FA20E5B-B67D-4AC5-9192-F0F14C7EEC0C}</Project>
       <Name>Controller</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataConection\DataConnection.csproj">
+      <Project>{8853DB4D-CA7B-451F-B616-6347261B2695}</Project>
+      <Name>DataConnection</Name>
     </ProjectReference>
     <ProjectReference Include="..\Util\Util.csproj">
       <Project>{5668BE43-061F-4FD2-AE08-ED9742E23309}</Project>

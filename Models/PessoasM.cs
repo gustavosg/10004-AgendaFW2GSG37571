@@ -56,7 +56,7 @@ namespace Data.Models
 
         public Boolean Inserir()
         {
-            String query = "INSERT INTO PESSOAS (nome, senha, sexo, idade) VALUES ('" 
+            String query = "INSERT INTO PESSOAS (nome, senha, sexo, idade) VALUES ('"
                 + this.nome + "', '" + this.senha + "', '" + this.sexo + "', '" + this.idade + "')";
 
             try
@@ -69,12 +69,13 @@ namespace Data.Models
             }
             catch (Exception ex)
             {
-                
-                //return false;
                 throw ex;
             }
         }
 
+        /// <summary>
+        /// Edita um registro de pessoa
+        /// </summary>
         public void Editar()
         {
             // ToDo Gustavo: Verificar processo de edição
@@ -99,15 +100,26 @@ namespace Data.Models
             connection.CloseConnection(conexao);
         }
 
+        /// <summary>
+        /// Retorna todas as pessoas cadastradas
+        /// </summary>
+        /// <returns>Relatório de Pessoas formato SqlDataReader</returns>
         public SqlDataReader ConsultarTodos()
         {
-            String query = "SELECT * FROM PESSOAS";
-            SqlConnection conexao = connection.OpenConnection();
-            SqlCommand comando = new SqlCommand(query, conexao);
+            SqlDataReader dr;
 
-            SqlDataReader dr = comando.ExecuteReader();
+            try
+            {
+                String query = "SELECT * FROM PESSOAS";
+                SqlConnection conexao = connection.OpenConnection();
+                SqlCommand comando = new SqlCommand(query, conexao);
 
-            connection.CloseConnection(conexao);
+                dr = comando.ExecuteReader();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
 
             return dr;
         }

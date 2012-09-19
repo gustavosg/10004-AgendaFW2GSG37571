@@ -1,6 +1,7 @@
 ﻿using System;
 using Data.Models;
 using Data.Util;
+using System.Data.SqlClient;
 
 namespace Data.Controller
 {
@@ -14,13 +15,10 @@ namespace Data.Controller
 
         #region Methods
 
-        public void Salvar(String nome)
+        public Boolean Salvar(String nome)
         {
-            if (locais == null){
-                locais = new LocaisM();
-                locais.nome = nome;
-                locais.InserirBD();
-            }
+            locais.nome = nome;
+            return locais.InserirBD();
         }
 
         public void Excluir(Int16 id = 0, String nome = "")
@@ -28,6 +26,13 @@ namespace Data.Controller
 
         }
 
+        public SqlDataReader PesquisarTodos()
+        {
+            return locais.ConsultarTodos();
+        }
+
         #endregion
+
+       
     }
 }
