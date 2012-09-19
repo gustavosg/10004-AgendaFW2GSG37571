@@ -32,16 +32,18 @@ namespace Data.Models
         public Boolean Login()
         {
 
-            String query = "SELECT * FROM PESSOAS WHERE nome = '" + this.nome + "'  AND senha = '" + this.senha +"'";
-            SqlConnection conexao = connection.OpenConnection();
-            SqlCommand comando = new SqlCommand(query, conexao);
-            SqlDataReader dr;
+            String query = "SELECT * FROM PESSOAS WHERE nome = '" + this.nome + "'  AND senha = '" + this.senha + "'";
             Boolean teste = false;
+
             try
             {
-                dr = comando.ExecuteReader();
-                
+                SqlConnection conexao = connection.OpenConnection();
+
+                SqlCommand comando = new SqlCommand(query, conexao);
+                SqlDataReader dr = comando.ExecuteReader();
                 teste = dr.HasRows;
+
+                connection.CloseConnection(conexao);
 
             }
             catch (Exception ex)
@@ -49,17 +51,14 @@ namespace Data.Models
                 throw ex;
             }
 
-
-            connection.CloseConnection(conexao);
-
             return teste;
-
         }
 
         public Boolean Inserir()
         {
-            String query = "INSERT INTO PESSOAS (nome, senha, sexo, idade) VALUES (" + this.nome + ", " + this.senha + ", " + this.sexo + ", " + this.idade + ")";
-            
+            String query = "INSERT INTO PESSOAS (nome, senha, sexo, idade) VALUES ('" 
+                + this.nome + "', '" + this.senha + "', '" + this.sexo + "', '" + this.idade + "')";
+
             try
             {
                 SqlConnection conexao = connection.OpenConnection();
@@ -68,10 +67,11 @@ namespace Data.Models
                 connection.CloseConnection(conexao);
                 return true;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return false;
-                throw;
+                
+                //return false;
+                throw ex;
             }
         }
 

@@ -39,7 +39,7 @@
                     <asp:Label ID="Label3" runat="server" Text="Senha:"></asp:Label>
                 </td>
                 <td class="style2">
-                    <asp:TextBox ID="senha" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="senha" runat="server" TextMode="Password"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -48,7 +48,7 @@
                 Text="Confirmar Senha:"></asp:Label>
                 </td>
                 <td class="style2">
-                    <asp:TextBox ID="confirmarSenha" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="confirmarSenha" runat="server" TextMode="Password"></asp:TextBox>
                 </td>
             </tr>
             <tr>

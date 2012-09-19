@@ -31,7 +31,7 @@ namespace System.Aplicacao.Account
             //Response.Write(pessoas.login(nome.Text, senha.Text));
             if (pessoas.login(Login1.UserName, Login1.Password))
             {
-                FormsAuthentication.SetAuthCookie("username", true);
+                
                 
                 RegisterHyperLink.NavigateUrl = "Register.aspx?ReturnUrl=" + HttpUtility.UrlEncode(Request.QueryString["ReturnUrl"]);
 
