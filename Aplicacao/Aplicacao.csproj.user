@@ -9,8 +9,8 @@
           <StartAction>CurrentPage</StartAction>
           <AspNetDebugging>True</AspNetDebugging>
           <SilverlightDebugging>False</SilverlightDebugging>
-          <NativeDebugging>True</NativeDebugging>
-          <SQLDebugging>False</SQLDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>True</SQLDebugging>
           <ExternalProgram>
           </ExternalProgram>
           <StartExternalURL>

@@ -30,5 +30,12 @@ namespace System.Aplicacao.Views.Pessoas
 
 
         }
+
+        protected void Editar_Click(object sender, EventArgs e)
+        {
+            Response.Write("oi");
+        }
+
+       
     }
 }

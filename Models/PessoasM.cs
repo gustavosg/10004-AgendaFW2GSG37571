@@ -21,6 +21,7 @@ namespace Data.Models
 
         public Int16 id { get; set; }
         public String nome { get; set; }
+        public String login { get; set; }
         public String senha { get; set; }
         public Char sexo { get; set; }
         public Int16 idade { get; set; }
@@ -56,8 +57,8 @@ namespace Data.Models
 
         public Boolean Inserir()
         {
-            String query = "INSERT INTO PESSOAS (nome, senha, sexo, idade) VALUES ('"
-                + this.nome + "', '" + this.senha + "', '" + this.sexo + "', '" + this.idade + "')";
+            String query = "INSERT INTO PESSOAS (nome, login, senha, sexo, idade) VALUES ('"
+                + this.nome + "', '" + this.login + "', '" + this.senha + "', '" + this.sexo + "', '" + this.idade + "')";
 
             try
             {
@@ -74,17 +75,26 @@ namespace Data.Models
         }
 
         /// <summary>
-        /// Edita um registro de pessoa
+        /// Atualiza um registro de pessoa
         /// </summary>
-        public void Editar()
+        /// <returns>Valor lógico que informa se teve sucesso.</returns>
+        public Boolean Atualizar()
         {
-            // ToDo Gustavo: Verificar processo de edição
-            String query = "UPDATE PESSOAS SET (nome = " + this.nome + ", sexo = " + this.sexo + ", idade = " + this.idade + ") WHERE nome LIKE " + this.nome;
-            SqlConnection conexao = connection.OpenConnection();
-            SqlCommand comando = new SqlCommand(query, conexao);
+            try
+            {
+                String query = "UPDATE PESSOAS SET nome = '" + this.nome + "', login = '" + this.login + "', senha = '"+ this.senha + "',  sexo = '" + this.sexo + "', idade = '" + this.idade + "' WHERE id LIKE '" + this.id + "'";
+                SqlConnection conexao = connection.OpenConnection();
+                SqlCommand comando = new SqlCommand(query, conexao);
 
-            connection.CloseConnection(conexao);
+                comando.ExecuteNonQuery();
 
+                connection.CloseConnection(conexao);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex; 
+            }
         }
 
         public void Excluir(String option)

@@ -13,8 +13,27 @@
     <br />
     <asp:Panel ID="Panel2" runat="server">
         <asp:GridView ID="gvPessoas" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None"
-            Style="text-align: center" HorizontalAlign="Center">
+            Style="text-align: center" HorizontalAlign="Center" 
+            AutoGenerateColumns="False" 
+            >
             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+            <Columns>
+                <asp:BoundField DataField="id" HeaderText="Código" />
+                <asp:BoundField DataField="nome" HeaderText="Nome" />
+                <asp:BoundField DataField="sexo" HeaderText="Sexo" />
+                <asp:BoundField DataField="idade" HeaderText="Idade" />
+                <asp:TemplateField HeaderText="Editar">
+                    <ItemTemplate>
+                        <asp:Button ID="Editar" runat="server" CausesValidation="False" 
+                            onclick="Editar_Click" Text="Editar" />
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:TemplateField HeaderText="Excluir">
+                    <ItemTemplate>
+                        <asp:Button ID="Excluir" runat="server" Text="Excluir" />
+                    </ItemTemplate>
+                </asp:TemplateField>
+            </Columns>
             <EditRowStyle BackColor="#999999" />
             <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
             <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />

@@ -36,6 +36,14 @@
             </tr>
             <tr>
                 <td class="style3">
+                    <asp:Label ID="Label7" runat="server" Text="Login"></asp:Label>
+                </td>
+                <td class="style2">
+                    <asp:TextBox ID="login" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="style3">
                     <asp:Label ID="Label3" runat="server" Text="Senha:"></asp:Label>
                 </td>
                 <td class="style2">
