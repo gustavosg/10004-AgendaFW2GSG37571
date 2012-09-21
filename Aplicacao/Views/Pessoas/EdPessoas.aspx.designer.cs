@@ -67,6 +67,15 @@ namespace System.Aplicacao.Views.Pessoas {
         protected global::System.Web.UI.WebControls.Button Editar;
         
         /// <summary>
+        /// Controle Aviso.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Aviso;
+        
+        /// <summary>
         /// Controle Panel3.
         /// </summary>
         /// <remarks>

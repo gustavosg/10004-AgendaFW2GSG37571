@@ -20,7 +20,28 @@ namespace Data.Models
 
         #endregion
 
-        #region Methods
+        #region Gravações
+
+        public Boolean Atualizar()
+        {
+            try
+            {
+                String query = "UPDATE TAREFAS SET nome = '" + this.nome + "' WHERE ID = '" + this.id + "'";
+                SqlConnection conexao = connection.OpenConnection();
+                SqlCommand comando = new SqlCommand(query, conexao);
+
+                comando.ExecuteNonQuery();
+
+                connection.CloseConnection(conexao);
+
+                return true;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
 
         /// <summary>
         /// Grava uma tarefa no banco de dados
@@ -65,17 +86,26 @@ namespace Data.Models
 
         }
 
+        #endregion
+
+        #region Consultas
+
         public SqlDataReader ConsultarTodos()
         {
-            String query = "SELECT * FROM TAREFAS";
-            SqlConnection conexao = connection.OpenConnection();
-            SqlCommand comando = new SqlCommand(query, conexao);
+            try
+            {
+                String query = "SELECT * FROM TAREFAS";
+                SqlConnection conexao = connection.OpenConnection();
+                SqlCommand comando = new SqlCommand(query, conexao);
 
-            SqlDataReader dr = comando.ExecuteReader();
+                SqlDataReader dr = comando.ExecuteReader();
 
-            connection.CloseConnection(conexao);
-
-            return dr;
+                return dr;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         #endregion

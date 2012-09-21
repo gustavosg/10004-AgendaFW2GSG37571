@@ -37,6 +37,8 @@
     <br />
     <asp:Panel ID="Panel5" runat="server" HorizontalAlign="Center">
         <asp:Button ID="Editar" runat="server" OnClick="Editar_Click" Text="Editar" />
+        <br />
+        <asp:Label ID="Aviso" runat="server" Text=""></asp:Label>
     </asp:Panel>
     <asp:Panel ID="Panel3" runat="server">
         <h2 align="center">
@@ -51,7 +53,7 @@
                     <asp:Label ID="Label8" runat="server" Text="Código"></asp:Label>
                 </td>
                 <td class="style2">
-                    <asp:TextBox ID="id" runat="server" ReadOnly="True"></asp:TextBox>
+                    <asp:TextBox ID="id" runat="server" ReadOnly="True" CausesValidation="True"></asp:TextBox>
                 </td>
             </tr>
             <tr>

@@ -22,15 +22,39 @@ namespace Data.Models
 
         #endregion
 
-        #region Methods
+        #region Gravações
 
+        /// <summary>
+        /// Atualizar um local
+        /// </summary>
+        /// <returns>Valor bool que informa se foi atualizado com sucesso</returns>
+        public Boolean Atualizar()
+        {
+            String query = "UPDATE LOCAIS SET nome = '" + this.nome + "' WHERE id = '"+ this.id + "'";
+
+            try
+            {
+                SqlConnection conexao = connection.OpenConnection();
+                SqlCommand comando = new SqlCommand(query, conexao);
+
+                comando.ExecuteNonQuery();
+                connection.CloseConnection(conexao);
+                
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        
         /// <summary>
         /// Insere um novo local no BD
         /// </summary>
         /// <returns>Valor bool que informa se foi inserido com sucesso</returns>
-        public Boolean InserirBD()
+        public Boolean Salvar()
         {
-            String query = "INSERT INTO LOCAIS (nome) VALUES ('"+ this.nome + "')";
+            String query = "INSERT INTO LOCAIS (nome) VALUES ('" + this.nome + "')";
 
             try
             {
@@ -45,6 +69,10 @@ namespace Data.Models
                 throw ex;
             }
         }
+
+        #endregion
+
+        #region Consultas
 
         /// <summary>
         /// Retorna todas os locais cadastrados

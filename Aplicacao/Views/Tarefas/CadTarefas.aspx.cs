@@ -25,7 +25,7 @@ namespace System.Aplicacao.Views.Tarefas
         protected void Salvar_Click(object sender, EventArgs e)
         {
             if (!nome.Text.Trim().Equals(String.Empty))
-                if (tarefas.Salvar(nome.Text))
+                if (tarefas.Salvar(nome.Text.Trim()))
                     Response.Write("Registro Salvo!");
 
         }

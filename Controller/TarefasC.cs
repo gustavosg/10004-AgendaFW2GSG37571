@@ -19,6 +19,14 @@ namespace Data.Controller
 
         #region Methods
 
+        public Boolean Atualizar(Int16 id, String nome)
+        {
+            tarefas.id = id;
+            tarefas.nome = nome;
+            return tarefas.Atualizar();
+
+        }
+
         public Boolean Salvar(String nome)
         {
             tarefas.nome = nome;
