@@ -56,6 +56,12 @@
                             <asp:MenuItem NavigateUrl="~/Views/Locais/ExcLocais.aspx" Text="Locais" 
                                 Value="Locais"></asp:MenuItem>
                         </asp:MenuItem>
+                        <asp:MenuItem Text="Operacional" Value="Operacional">
+                            <asp:MenuItem Text="Atribuir Tarefa à Pessoas" 
+                                Value="Atribuir Tarefa à Pessoas"></asp:MenuItem>
+                            <asp:MenuItem Text="Remover Tarefa de Pessoas" 
+                                Value="Remover Tarefa de Pessoas"></asp:MenuItem>
+                        </asp:MenuItem>
                         <asp:MenuItem Text="Relatórios" Value="Relatórios">
                             <asp:MenuItem NavigateUrl="~/Views/Pessoas/RelPessoas.aspx" Text="Pessoas" 
                                 Value="Pessoas"></asp:MenuItem>

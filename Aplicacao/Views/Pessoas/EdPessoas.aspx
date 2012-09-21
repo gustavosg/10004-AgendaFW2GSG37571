@@ -91,7 +91,7 @@
                     <asp:Label ID="Label5" runat="server" Text="Sexo"></asp:Label>
                 </td>
                 <td class="style2">
-                    <asp:RadioButtonList ID="sexo" runat="server" align="left" AutoPostBack="True" RepeatDirection="Horizontal"
+                    <asp:RadioButtonList ID="sexo" runat="server" align="left" RepeatDirection="Horizontal"
                         Style="text-align: left">
                         <asp:ListItem>Masculino</asp:ListItem>
                         <asp:ListItem>Feminino</asp:ListItem>

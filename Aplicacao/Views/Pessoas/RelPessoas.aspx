@@ -20,19 +20,9 @@
             <Columns>
                 <asp:BoundField DataField="id" HeaderText="Código" />
                 <asp:BoundField DataField="nome" HeaderText="Nome" />
+                <asp:BoundField DataField="login" HeaderText="Login" />
                 <asp:BoundField DataField="sexo" HeaderText="Sexo" />
                 <asp:BoundField DataField="idade" HeaderText="Idade" />
-                <asp:TemplateField HeaderText="Editar">
-                    <ItemTemplate>
-                        <asp:Button ID="Editar" runat="server" CausesValidation="False" 
-                            onclick="Editar_Click" Text="Editar" />
-                    </ItemTemplate>
-                </asp:TemplateField>
-                <asp:TemplateField HeaderText="Excluir">
-                    <ItemTemplate>
-                        <asp:Button ID="Excluir" runat="server" Text="Excluir" />
-                    </ItemTemplate>
-                </asp:TemplateField>
             </Columns>
             <EditRowStyle BackColor="#999999" />
             <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />

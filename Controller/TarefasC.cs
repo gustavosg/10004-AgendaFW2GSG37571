@@ -19,15 +19,10 @@ namespace Data.Controller
 
         #region Methods
 
-        public void Salvar(String nome, DateTime data)
+        public Boolean Salvar(String nome)
         {
-            if (tarefas == null)
-            {
-                tarefas = new TarefasM();
-                tarefas.nome = nome;
-                tarefas.data = data;
-                tarefas.Salvar();
-            }
+            tarefas.nome = nome;
+            return tarefas.Salvar();
         }
 
         public void Excluir(Int16 id = 0, String nome = "")
