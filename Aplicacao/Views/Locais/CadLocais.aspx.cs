@@ -20,7 +20,7 @@ namespace System.Aplicacao.Views.Locais
         {
             if (this.IsPostBack)
                 nome.Text = String.Empty;
-
+            
         }
 
         protected void Salvar_Click(object sender, EventArgs e)
