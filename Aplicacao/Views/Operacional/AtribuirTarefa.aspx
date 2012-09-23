@@ -1,5 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AtribuirTarefa.aspx.cs" Inherits="System.Aplicacao.Views.Operacional.AtribuirTarefa" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
+    <style type="text/css">
+        .style1
+        {
+            width: 6px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <asp:Panel ID="Panel1" runat="server">
@@ -9,21 +15,21 @@
     </asp:Panel>
     <br />
     <asp:Panel ID="Panel2" runat="server">
-        <table style="width:100%;" align="center">
+        <table style="width:100%;">
             <tr>
                 <td align="center">
                     <h2>
                         <asp:Label ID="Label2" runat="server" Text="Tarefas"></asp:Label>
                     </h2>
                 </td>
-                <td>
-                    <h2 align="center">
-                        <asp:Label ID="Label3" runat="server" Text="Locais"></asp:Label>
+                <td align=center>
+                    <h2>
+                        <asp:Label ID="Label5" runat="server" style="text-align: center" Text="LOCAIS"></asp:Label>
                     </h2>
                 </td>
             </tr>
             <tr>
-                <td>
+                <td width="50%">
                     <asp:GridView ID="gvTarefas" runat="server" AutoGenerateColumns="False" 
                         AutoGenerateSelectButton="True" CellPadding="4" ForeColor="#333333" 
                         GridLines="None" HorizontalAlign="Center" 
@@ -45,6 +51,7 @@
                         <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
                     </asp:GridView>
                 </td>
+                
                 <td>
                     <asp:GridView ID="gvLocais" runat="server" AutoGenerateColumns="False" 
                         AutoGenerateSelectButton="True" CellPadding="4" ForeColor="#333333" 
@@ -104,6 +111,18 @@
                         <SortedDescendingCellStyle BackColor="#FFFDF8" />
                         <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
                     </asp:GridView>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" colspan="2" >
+                    <h2>
+                        <asp:Label ID="Label6" runat="server" Text="Momento do compromisso"></asp:Label>
+                    </h2>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" colspan="2">
+                    <asp:Calendar ID="data" runat="server"></asp:Calendar>
                 </td>
             </tr>
         </table>

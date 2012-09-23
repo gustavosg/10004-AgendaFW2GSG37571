@@ -26,14 +26,19 @@ namespace Data.Models
 
         public Boolean MarcarTarefas()
         {
-            String consulta = "INSERT INTO AGENDAMENTOS (id_pessoas, id_tarefas, id_locais, data) VALUES ('" + this.id_pessoas + "','" +
-                    this.id_tarefas + "', '" + this.id_locais + "', '" + this.data + "')";
+            List<String> consultas = null;
+
+            consultas.Add("INSERT INTO AGENDAMENTOS (id_pessoas, id_tarefas, id_locais, data) VALUES ('" + this.id_pessoas.id + "','" +
+                    this.id_tarefas.id + "', '" + this.id_locais.id + "', '" + this.data + "');");
 
             try
             {
                 SqlConnection conexaoSql = conexao.OpenConnection();
-                SqlCommand comando = new SqlCommand(consulta, conexaoSql);
-                comando.ExecuteNonQuery();
+                foreach (var consulta in consultas)
+                {
+                    SqlCommand comando = new SqlCommand(consulta, conexaoSql);
+                    comando.ExecuteNonQuery();
+                }
 
                 return true;
             }

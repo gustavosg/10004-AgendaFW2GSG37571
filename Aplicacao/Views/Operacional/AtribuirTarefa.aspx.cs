@@ -86,15 +86,13 @@ namespace System.Aplicacao.Views.Operacional
                 {
                     rowSelected = row;
                     gvRowSelected = row.FindControl("cbxSelecionar") as CheckBox;
+
+                    if (gvRowSelected.Checked == true)
+                        cbxSelecionar_CheckedAdd(Convert.ToInt16(rowSelected.Cells[1].Text));
+                    else
+                        cbxSelecionar_CheckedRemove(Convert.ToInt16(rowSelected.Cells[1].Text));
                 }
-
             }
-
-
-            if (gvRowSelected.Checked == true)
-                cbxSelecionar_CheckedAdd(Convert.ToInt16(rowSelected.Cells[1].Text));
-            else
-                cbxSelecionar_CheckedRemove(Convert.ToInt16(rowSelected.Cells[1].Text));
         }
 
         void cbxSelecionar_CheckedAdd(Int16 id)
@@ -111,28 +109,36 @@ namespace System.Aplicacao.Views.Operacional
         {
             VerificarCheckBox();
 
+            pessoasSelecionadas();
             foreach (Int16 id in ids)
             {
-                //atribuirTarefas.MarcarTarefas(id, pessoas, tarefaAgendar, localAgendar, null);
+                atribuirTarefas.MarcarTarefas(id, pessoaAgendar, tarefaAgendar, localAgendar, data.SelectedDate);
                 
             }
+            conexao.CloseConnection();
         }
 
         protected void pessoasSelecionadas()
         {
-            //var query = from list in gvPessoas.Rows[0] select list;
+            foreach (Int16 id in ids)
+            {
+                int x = 0;
+                x = id - 1;
+                pessoaAgendar.id = Convert.ToInt16(gvPessoas.Rows[x].Cells[1].Text);
+                pessoaAgendar.nome = HttpUtility.HtmlDecode(gvPessoas.Rows[x].Cells[2].Text.Trim());
+            }
             
         }
 
         protected void gvTarefas_SelectedIndexChanged(object sender, EventArgs e)
         {
-            tarefaAgendar.id = Convert.ToInt16(gvTarefas.SelectedRow.Cells[1]);
+            tarefaAgendar.id = Convert.ToInt16(gvTarefas.SelectedRow.Cells[1].Text);
             tarefaAgendar.nome = HttpUtility.HtmlDecode(gvTarefas.SelectedRow.Cells[2].Text);
         }
 
         protected void gvLocais_SelectedIndexChanged(object sender, EventArgs e)
         {
-            localAgendar.id = Convert.ToInt16(gvLocais.SelectedRow.Cells[1]);
+            localAgendar.id = Convert.ToInt16(gvLocais.SelectedRow.Cells[1].Text);
             localAgendar.nome = HttpUtility.HtmlDecode(gvLocais.SelectedRow.Cells[2].Text);
 
         }

@@ -17,7 +17,7 @@ namespace Data.Controller
 
         #region Metodos
 
-        public Boolean MarcarTarefas(Int16 id, PessoasM pessoas, TarefasM tarefa, LocaisM local, DateTime data)
+        public void MarcarTarefas(Int16 id, PessoasM pessoas, TarefasM tarefa, LocaisM local, DateTime data)
         {
             atribuirTarefa.id = id;
             atribuirTarefa.id_pessoas = pessoas;
@@ -25,7 +25,7 @@ namespace Data.Controller
             atribuirTarefa.id_locais = local;
             atribuirTarefa.data = data;
 
-            return atribuirTarefa.MarcarTarefas();
+            atribuirTarefa.MarcarTarefas();
         }
 
         #endregion
