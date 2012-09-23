@@ -67,6 +67,8 @@
     <Content Include="Views\Locais\EdLocais.aspx" />
     <Content Include="Views\Locais\ExcLocais.aspx" />
     <Content Include="Views\Locais\RelLocais.aspx" />
+    <Content Include="Views\Operacional\AtribuirTarefa.aspx" />
+    <Content Include="Views\Operacional\RemoverTarefa.aspx" />
     <Content Include="Views\Pessoas\CadPessoas.aspx" />
     <Content Include="Views\Pessoas\EdPessoas.aspx" />
     <Content Include="Views\Pessoas\ExcPessoas.aspx" />
@@ -165,6 +167,20 @@
     <Compile Include="Views\Locais\RelLocais.aspx.designer.cs">
       <DependentUpon>RelLocais.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\Operacional\AtribuirTarefa.aspx.cs">
+      <DependentUpon>AtribuirTarefa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Operacional\AtribuirTarefa.aspx.designer.cs">
+      <DependentUpon>AtribuirTarefa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Operacional\RemoverTarefa.aspx.cs">
+      <DependentUpon>RemoverTarefa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Operacional\RemoverTarefa.aspx.designer.cs">
+      <DependentUpon>RemoverTarefa.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Pessoas\CadPessoas.aspx.cs">
       <DependentUpon>CadPessoas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -237,6 +253,10 @@
     <ProjectReference Include="..\DataConection\DataConnection.csproj">
       <Project>{8853DB4D-CA7B-451F-B616-6347261B2695}</Project>
       <Name>DataConnection</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{6511945D-4F62-405A-A056-A2D764E2BE36}</Project>
+      <Name>Models</Name>
     </ProjectReference>
     <ProjectReference Include="..\Util\Util.csproj">
       <Project>{5668BE43-061F-4FD2-AE08-ED9742E23309}</Project>

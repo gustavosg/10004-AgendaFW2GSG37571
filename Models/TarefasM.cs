@@ -32,7 +32,7 @@ namespace Data.Models
 
                 comando.ExecuteNonQuery();
 
-                connection.CloseConnection(conexao);
+                connection.CloseConnection();
 
                 return true;
             }
@@ -57,7 +57,7 @@ namespace Data.Models
 
                 comando.ExecuteNonQuery();
 
-                connection.CloseConnection(conexao);
+                connection.CloseConnection();
 
                 return true;
             }
@@ -80,7 +80,7 @@ namespace Data.Models
 
             SqlDataReader dr = comando.ExecuteReader();
 
-            connection.CloseConnection(conexao);
+            connection.CloseConnection();
 
             return dr;
 

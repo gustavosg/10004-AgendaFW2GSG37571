@@ -28,13 +28,10 @@ namespace System.Aplicacao.Views.Locais
         /// <param name="e"></param>
         protected void Page_Load(object sender, EventArgs e)
         {
-            gvLocais.DataSource = locais.PesquisarTodos();
+            gvLocais.DataSource = locais.ConsultarTodos();
             gvLocais.DataBind();
 
-            conexao.CloseConnection(conexao.OpenConnection());
-
-
-
+            conexao.CloseConnection();
         }
 
         #endregion

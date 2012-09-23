@@ -33,8 +33,9 @@ namespace Data.DataConnection
             return connection;
         }
 
-        public void CloseConnection(SqlConnection con)
+        public void CloseConnection()
         {
+            SqlConnection con = OpenConnection();
             con.Close();
         }
 

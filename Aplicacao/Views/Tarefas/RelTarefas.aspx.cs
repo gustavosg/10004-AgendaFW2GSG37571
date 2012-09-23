@@ -26,7 +26,7 @@ namespace System.Aplicacao.Views.Tarefas
             gvTarefas.DataSource = tarefas.ConsultarTodos();
             gvTarefas.DataBind();
 
-            conexao.CloseConnection(conexao.OpenConnection());            
+            conexao.CloseConnection();
         }
 
         #endregion

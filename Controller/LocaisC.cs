@@ -37,7 +37,7 @@ namespace Data.Controller
 
         #region Consultas
 
-        public SqlDataReader PesquisarTodos()
+        public SqlDataReader ConsultarTodos()
         {
             return locais.ConsultarTodos();
         }

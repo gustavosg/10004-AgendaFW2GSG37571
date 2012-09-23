@@ -44,7 +44,7 @@ namespace Data.Models
                 SqlDataReader dr = comando.ExecuteReader();
                 teste = dr.HasRows;
 
-                connection.CloseConnection(conexao);
+                connection.CloseConnection();
 
             }
             catch (Exception ex)
@@ -65,7 +65,7 @@ namespace Data.Models
                 SqlConnection conexao = connection.OpenConnection();
                 SqlCommand comando = new SqlCommand(query, conexao);
                 comando.ExecuteNonQuery();
-                connection.CloseConnection(conexao);
+                connection.CloseConnection();
                 return true;
             }
             catch (Exception ex)
@@ -88,7 +88,7 @@ namespace Data.Models
 
                 comando.ExecuteNonQuery();
 
-                connection.CloseConnection(conexao);
+                connection.CloseConnection();
                 return true;
             }
             catch (Exception ex)
@@ -107,7 +107,7 @@ namespace Data.Models
             SqlConnection conexao = connection.OpenConnection();
             SqlCommand comando = new SqlCommand(query, conexao);
 
-            connection.CloseConnection(conexao);
+            connection.CloseConnection();
         }
 
         /// <summary>

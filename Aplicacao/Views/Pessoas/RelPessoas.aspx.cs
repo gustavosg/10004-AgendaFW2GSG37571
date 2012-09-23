@@ -23,10 +23,10 @@ namespace System.Aplicacao.Views.Pessoas
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            gvPessoas.DataSource = pessoas.PesquisarTodos();
+            gvPessoas.DataSource = pessoas.ConsultarTodos();
             gvPessoas.DataBind();
 
-            connection.CloseConnection(connection.OpenConnection());
+            connection.CloseConnection();
 
 
         }

@@ -68,10 +68,10 @@ namespace System.Aplicacao.Views.Locais
 
         private void CarregarGridLocais()
         {
-            gvLocais.DataSource = locais.PesquisarTodos();
+            gvLocais.DataSource = locais.ConsultarTodos();
             gvLocais.DataBind();
 
-            conexao.CloseConnection(conexao.OpenConnection());
+            conexao.CloseConnection();
         }
     }
 }

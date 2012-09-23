@@ -38,7 +38,7 @@ namespace Data.Models
                 SqlCommand comando = new SqlCommand(query, conexao);
 
                 comando.ExecuteNonQuery();
-                connection.CloseConnection(conexao);
+                connection.CloseConnection();
                 
                 return true;
             }
@@ -61,7 +61,7 @@ namespace Data.Models
                 SqlConnection conexao = connection.OpenConnection();
                 SqlCommand comando = new SqlCommand(query, conexao);
                 comando.ExecuteNonQuery();
-                connection.CloseConnection(conexao);
+                connection.CloseConnection();
                 return true;
             }
             catch (Exception ex)

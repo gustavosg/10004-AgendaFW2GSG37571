@@ -31,7 +31,7 @@ namespace Data.Controller
             return pessoas.Login();
         }
 
-        public SqlDataReader PesquisarTodos()
+        public SqlDataReader ConsultarTodos()
         {
             return pessoas.ConsultarTodos();
         }

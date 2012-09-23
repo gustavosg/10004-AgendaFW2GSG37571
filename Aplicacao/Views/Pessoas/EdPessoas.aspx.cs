@@ -85,10 +85,10 @@ namespace System.Aplicacao.Views.Pessoas
 
         private void CarregarGridPessoas()
         {
-            gvPessoas.DataSource = pessoas.PesquisarTodos();
+            gvPessoas.DataSource = pessoas.ConsultarTodos();
             gvPessoas.DataBind();
 
-            conexao.CloseConnection(conexao.OpenConnection());
+            conexao.CloseConnection();
         }
 
     }
