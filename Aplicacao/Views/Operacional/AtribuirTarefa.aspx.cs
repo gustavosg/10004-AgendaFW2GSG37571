@@ -25,11 +25,8 @@ namespace System.Aplicacao.Views.Operacional
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
             if (this.IsPostBack)
-            {
-
-            }
+            { }
             else
             {
                 CarregarTarefas();
@@ -83,6 +80,8 @@ namespace System.Aplicacao.Views.Operacional
                 if (row.RowType == DataControlRowType.DataRow)
                 {
                     rowSelected = row;
+                    
+                    //Procura componente Selecionar dentro do Grid, confere se está selecionado
                     gvRowSelected = row.FindControl("cbxSelecionar") as CheckBox;
 
                     if (gvRowSelected.Checked == true)
@@ -93,16 +92,21 @@ namespace System.Aplicacao.Views.Operacional
             }
         }
 
+        /// <summary>
+        /// Atribui tarefa para as pessoas selecionadas
+        /// </summary>
         protected void Atribuir_Click(object sender, EventArgs e)
         {
             VerificarCheckBox();
 
             foreach (Int16 id in ids)
-                if (atribuirTarefas.MarcarTarefas(id, Convert.ToInt16(gvTarefas.SelectedRow.Cells[1].Text), Convert.ToInt16(gvLocais.SelectedRow.Cells[1].Text), data.SelectedDate))
+                if (atribuirTarefas.MarcarTarefas(id, Convert.ToInt16(gvTarefas.SelectedRow.Cells[1].Text),
+                        Convert.ToInt16(gvLocais.SelectedRow.Cells[1].Text), data.SelectedDate))
                     Aviso.Text = "Registro gravado com sucesso!";
                 else
                     Aviso.Text = "Houve erro ao inserir, favor consultar log!";
 
+            //Fecha conexão
             conexao.CloseConnection();
         }
 

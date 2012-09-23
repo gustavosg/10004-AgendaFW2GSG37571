@@ -1,20 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using Data.Controller;
+﻿using Data.Controller;
 
 namespace System.Aplicacao.Views.Locais
 {
     public partial class CadLocais : System.Web.UI.Page
     {
-        #region fields
+        #region Campos
 
         LocaisC locais = LocaisC.GetSingleton();
 
         #endregion
+
+        #region Métodos
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -23,11 +19,16 @@ namespace System.Aplicacao.Views.Locais
             
         }
 
+        /// <summary>
+        /// Salva um novo local
+        /// </summary>
         protected void Salvar_Click(object sender, EventArgs e)
         {
             if (!nome.Text.Equals(String.Empty))
                 if (locais.Salvar(nome.Text))
                     Response.Write("Registro salvo");
         }
+
+        #endregion
     }
 }

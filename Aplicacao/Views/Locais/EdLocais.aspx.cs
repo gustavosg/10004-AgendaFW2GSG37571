@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+﻿using System.Web;
 using Data.DataConnection;
 using Data.Controller;
+using Data.Util;
 using System.Drawing;
 
 namespace System.Aplicacao.Views.Locais
@@ -42,9 +38,12 @@ namespace System.Aplicacao.Views.Locais
             }
         }
 
+        /// <summary>
+        /// Atualiza as informações editadas
+        /// </summary>
         protected void Atualizar_Click(object sender, EventArgs e)
         {
-            if (nome.Text.Equals(HttpUtility.HtmlDecode(gvLocais.SelectedRow.Cells[2].Text.Trim())))
+            if (nome.Text.Equals(gvLocais.SelectedRow.Cells[2].Text.Trim().ConvertStringToHTMLDecode()))
             {
                 Aviso.Text = "É necessário informar um novo nome!";
                 Aviso.ForeColor = Color.Red;
@@ -66,11 +65,15 @@ namespace System.Aplicacao.Views.Locais
             }
         }
 
+        /// <summary>
+        /// Popula a grade de locais
+        /// </summary>
         private void CarregarGridLocais()
         {
             gvLocais.DataSource = locais.ConsultarTodos();
             gvLocais.DataBind();
 
+            // Fecha conexão
             conexao.CloseConnection();
         }
     }

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
+﻿using System.Collections.Generic;
 using System.Web.UI.WebControls;
 using Data.DataConnection;
 using Data.Controller;
@@ -21,21 +17,21 @@ namespace System.Aplicacao.Views.Operacional
 
         #endregion
 
+        #region Métodos
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
             if (this.IsPostBack)
             {
                 CarregarTarefasAtribuidas();
             }
             else
-            {
-
-                
-            }
+            { }
         }
 
+        /// <summary>
+        /// Carrega informações para a grade de Tarefas
+        /// </summary>
         private void CarregarTarefasAtribuidas()
         {
             gvTarefasAtribuidas.DataSource = atribuirTarefa.ConsultarTodos();
@@ -45,7 +41,7 @@ namespace System.Aplicacao.Views.Operacional
         }
 
         /// <summary>
-        /// Confere quais registros foram selecionados no grid para marcar o agendamento.
+        /// Confere quais registros foram selecionados no grid para remover o agendamento.
         /// </summary>
         protected void VerificarCheckBox()
         {
@@ -56,6 +52,8 @@ namespace System.Aplicacao.Views.Operacional
                 if (row.RowType == DataControlRowType.DataRow)
                 {
                     rowSelected = row;
+
+                    // Procura componente Selecionar dentro do Grid, confere se está selecionado
                     gvRowSelected = row.FindControl("cbxSelecionar") as CheckBox;
 
                     if (gvRowSelected.Checked == true)
@@ -66,6 +64,9 @@ namespace System.Aplicacao.Views.Operacional
             }
         }
 
+        /// <summary>
+        /// Remove todos os registros selecionados
+        /// </summary>
         protected void Remover_Click(object sender, EventArgs e)
         {
             VerificarCheckBox();
@@ -75,7 +76,9 @@ namespace System.Aplicacao.Views.Operacional
                 else
                     Aviso.Text = "Houve erro ao remover, favor consultar log!";
 
+            // Fecha Conexão
             conexao.CloseConnection();
         }
+        #endregion
     }
 }
