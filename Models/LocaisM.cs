@@ -80,22 +80,18 @@ namespace Data.Models
         /// <returns>Relatório de Locais formato SqlDataReader</returns>
         public SqlDataReader ConsultarTodos()
         {
-            SqlDataReader dr;
-
             try
             {
                 String query = "SELECT * FROM LOCAIS";
                 SqlConnection conexao = connection.OpenConnection();
                 SqlCommand comando = new SqlCommand(query, conexao);
 
-                dr = comando.ExecuteReader();
+                return comando.ExecuteReader();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                throw ex;
             }
-
-            return dr;
         }
 
         #endregion

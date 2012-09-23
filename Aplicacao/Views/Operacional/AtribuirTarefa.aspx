@@ -1,4 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AtribuirTarefa.aspx.cs" Inherits="System.Aplicacao.Views.Operacional.AtribuirTarefa" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"
+    CodeBehind="AtribuirTarefa.aspx.cs" Inherits="System.Aplicacao.Views.Operacional.AtribuirTarefa" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
     <style type="text/css">
         .style1
@@ -15,25 +17,23 @@
     </asp:Panel>
     <br />
     <asp:Panel ID="Panel2" runat="server">
-        <table style="width:100%;">
+        <table style="width: 100%;">
             <tr>
                 <td align="center">
                     <h2>
                         <asp:Label ID="Label2" runat="server" Text="Tarefas"></asp:Label>
                     </h2>
                 </td>
-                <td align=center>
+                <td align="center">
                     <h2>
-                        <asp:Label ID="Label5" runat="server" style="text-align: center" Text="LOCAIS"></asp:Label>
+                        <asp:Label ID="Label5" runat="server" Style="text-align: center" Text="LOCAIS"></asp:Label>
                     </h2>
                 </td>
             </tr>
             <tr>
                 <td width="50%">
-                    <asp:GridView ID="gvTarefas" runat="server" AutoGenerateColumns="False" 
-                        AutoGenerateSelectButton="True" CellPadding="4" ForeColor="#333333" 
-                        GridLines="None" HorizontalAlign="Center" 
-                        onselectedindexchanged="gvTarefas_SelectedIndexChanged" >
+                    <asp:GridView ID="gvTarefas" runat="server" AutoGenerateColumns="False" AutoGenerateSelectButton="True"
+                        CellPadding="4" ForeColor="#333333" GridLines="None" HorizontalAlign="Center">
                         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                         <Columns>
                             <asp:BoundField DataField="id" HeaderText="Código" />
@@ -51,12 +51,10 @@
                         <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
                     </asp:GridView>
                 </td>
-                
                 <td>
-                    <asp:GridView ID="gvLocais" runat="server" AutoGenerateColumns="False" 
-                        AutoGenerateSelectButton="True" CellPadding="4" ForeColor="#333333" 
-                        GridLines="None" HorizontalAlign="Center" Style="text-align: center" 
-                        onselectedindexchanged="gvLocais_SelectedIndexChanged">
+                    <asp:GridView ID="gvLocais" runat="server" AutoGenerateColumns="False" AutoGenerateSelectButton="True"
+                        CellPadding="4" ForeColor="#333333" GridLines="None" HorizontalAlign="Center"
+                        Style="text-align: center">
                         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                         <Columns>
                             <asp:BoundField DataField="id" HeaderText="Código" />
@@ -84,9 +82,8 @@
             </tr>
             <tr>
                 <td colspan="2">
-                    <asp:GridView ID="gvPessoas" runat="server" AutoGenerateColumns="False" 
-                        CellPadding="4" ForeColor="#333333" 
-                        GridLines="None" HorizontalAlign="Center" Style="text-align: center">
+                    <asp:GridView ID="gvPessoas" runat="server" AutoGenerateColumns="False" CellPadding="4"
+                        ForeColor="#333333" GridLines="None" HorizontalAlign="Center" Style="text-align: center">
                         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                         <Columns>
                             <asp:TemplateField HeaderText="Selecionar">
@@ -114,7 +111,7 @@
                 </td>
             </tr>
             <tr>
-                <td align="center" colspan="2" >
+                <td align="center" colspan="2">
                     <h2>
                         <asp:Label ID="Label6" runat="server" Text="Momento do compromisso"></asp:Label>
                     </h2>
@@ -127,10 +124,12 @@
             </tr>
         </table>
     </asp:Panel>
-    <p>
-        &nbsp;</p>
+    <asp:Panel ID="Panel4" runat="server">
+        <h1>
+            <asp:Label ID="Aviso" runat="server" ForeColor="Red"></asp:Label>
+        </h1>
+    </asp:Panel>
     <asp:Panel ID="Panel3" runat="server" HorizontalAlign="Center">
-        <asp:Button ID="Atribuir" runat="server" Text="Atribuir" 
-            onclick="Atribuir_Click" />
+        <asp:Button ID="Atribuir" runat="server" Text="Atribuir" OnClick="Atribuir_Click" />
     </asp:Panel>
 </asp:Content>

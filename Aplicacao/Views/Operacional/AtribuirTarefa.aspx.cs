@@ -1,34 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
+﻿using System.Collections.Generic;
 using System.Web.UI.WebControls;
 using Data.Controller;
 using Data.DataConnection;
-using Data.Models;
 
 namespace System.Aplicacao.Views.Operacional
 {
     public partial class AtribuirTarefa : System.Web.UI.Page
     {
-        #region Fields
+        #region Campos
 
         ConnectionUtil conexao = ConnectionUtil.GetSingleton();
 
         TarefasC tarefas = TarefasC.GetSingleton();
         LocaisC locais = LocaisC.GetSingleton();
         PessoasC pessoas = PessoasC.GetSingleton();
-        
-        TarefasM tarefaAgendar = TarefasM.GetSingleton();
-        LocaisM localAgendar = LocaisM.GetSingleton();
-        PessoasM pessoaAgendar = PessoasM.GetSingleton();
 
         AtribuirTarefaC atribuirTarefas = AtribuirTarefaC.GetSingleton();
 
         List<Int16> ids = new List<Int16>();
 
         #endregion
+
+        #region Métodos
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -46,7 +39,7 @@ namespace System.Aplicacao.Views.Operacional
         }
 
         /// <summary>
-        /// 
+        /// Popula a grade de tarefas
         /// </summary>
         private void CarregarTarefas()
         {
@@ -56,6 +49,9 @@ namespace System.Aplicacao.Views.Operacional
             conexao.CloseConnection();
         }
 
+        /// <summary>
+        /// Popula a grade de locais
+        /// </summary>
         private void CarregarLocais()
         {
             gvLocais.DataSource = locais.ConsultarTodos();
@@ -64,17 +60,19 @@ namespace System.Aplicacao.Views.Operacional
             conexao.CloseConnection();
         }
 
+        /// <summary>
+        /// Popula a grade de pessoas
+        /// </summary>
         private void CarregarPessoas()
         {
             gvPessoas.DataSource = pessoas.ConsultarTodos();
             gvPessoas.DataBind();
 
             conexao.CloseConnection();
-
         }
 
         /// <summary>
-        /// 
+        /// Confere quais registros foram selecionados no grid para marcar o agendamento.
         /// </summary>
         protected void VerificarCheckBox()
         {
@@ -88,60 +86,26 @@ namespace System.Aplicacao.Views.Operacional
                     gvRowSelected = row.FindControl("cbxSelecionar") as CheckBox;
 
                     if (gvRowSelected.Checked == true)
-                        cbxSelecionar_CheckedAdd(Convert.ToInt16(rowSelected.Cells[1].Text));
+                        ids.Add(Convert.ToInt16(rowSelected.Cells[1].Text));
                     else
-                        cbxSelecionar_CheckedRemove(Convert.ToInt16(rowSelected.Cells[1].Text));
+                        ids.Remove(Convert.ToInt16(rowSelected.Cells[1].Text));
                 }
             }
-        }
-
-        void cbxSelecionar_CheckedAdd(Int16 id)
-        {
-            ids.Add(id);
-        }
-
-        void cbxSelecionar_CheckedRemove(Int16 id)
-        {
-            ids.Remove(id);
         }
 
         protected void Atribuir_Click(object sender, EventArgs e)
         {
             VerificarCheckBox();
 
-            pessoasSelecionadas();
             foreach (Int16 id in ids)
-            {
-                atribuirTarefas.MarcarTarefas(id, pessoaAgendar, tarefaAgendar, localAgendar, data.SelectedDate);
-                
-            }
+                if (atribuirTarefas.MarcarTarefas(id, Convert.ToInt16(gvTarefas.SelectedRow.Cells[1].Text), Convert.ToInt16(gvLocais.SelectedRow.Cells[1].Text), data.SelectedDate))
+                    Aviso.Text = "Registro gravado com sucesso!";
+                else
+                    Aviso.Text = "Houve erro ao inserir, favor consultar log!";
+
             conexao.CloseConnection();
         }
 
-        protected void pessoasSelecionadas()
-        {
-            foreach (Int16 id in ids)
-            {
-                int x = 0;
-                x = id - 1;
-                pessoaAgendar.id = Convert.ToInt16(gvPessoas.Rows[x].Cells[1].Text);
-                pessoaAgendar.nome = HttpUtility.HtmlDecode(gvPessoas.Rows[x].Cells[2].Text.Trim());
-            }
-            
-        }
-
-        protected void gvTarefas_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            tarefaAgendar.id = Convert.ToInt16(gvTarefas.SelectedRow.Cells[1].Text);
-            tarefaAgendar.nome = HttpUtility.HtmlDecode(gvTarefas.SelectedRow.Cells[2].Text);
-        }
-
-        protected void gvLocais_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            localAgendar.id = Convert.ToInt16(gvLocais.SelectedRow.Cells[1].Text);
-            localAgendar.nome = HttpUtility.HtmlDecode(gvLocais.SelectedRow.Cells[2].Text);
-
-        }
-
+        #endregion
     }
 }

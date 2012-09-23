@@ -254,10 +254,6 @@
       <Project>{8853DB4D-CA7B-451F-B616-6347261B2695}</Project>
       <Name>DataConnection</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Models\Models.csproj">
-      <Project>{6511945D-4F62-405A-A056-A2D764E2BE36}</Project>
-      <Name>Models</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Util\Util.csproj">
       <Project>{5668BE43-061F-4FD2-AE08-ED9742E23309}</Project>
       <Name>Util</Name>
