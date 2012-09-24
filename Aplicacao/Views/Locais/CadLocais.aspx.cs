@@ -1,4 +1,8 @@
-﻿using Data.Controller;
+﻿#region Referências
+
+using Data.Controller;
+
+#endregion
 
 namespace System.Aplicacao.Views.Locais
 {
@@ -6,6 +10,7 @@ namespace System.Aplicacao.Views.Locais
     {
         #region Campos
 
+        // Controller
         LocaisC locais = LocaisC.GetSingleton();
 
         #endregion
@@ -26,7 +31,9 @@ namespace System.Aplicacao.Views.Locais
         {
             if (!nome.Text.Equals(String.Empty))
                 if (locais.Salvar(nome.Text))
-                    Response.Write("Registro salvo");
+                    Aviso.Text= "Registro salvo";
+                else
+                    Aviso.Text = "Houve erro ao cadastrar, favor consultar log!";
         }
 
         #endregion

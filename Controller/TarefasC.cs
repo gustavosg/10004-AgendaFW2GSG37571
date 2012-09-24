@@ -33,33 +33,28 @@ namespace Data.Controller
             return tarefas.Salvar();
         }
 
-        public void Excluir(Int16 id = 0, String nome = "")
+        /// <summary>
+        /// Remove um registro
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public Boolean Remover(Int16 id = 0)
         {
-            if (id != 0)
-                tarefas.id = id;
+            tarefas.id = id;
 
-            if (!nome.Equals(String.Empty))
-                tarefas.nome = nome;
-
-            tarefas.Excluir();
+            return tarefas.Remover();
 
         }
 
+        /// <summary>
+        /// Retorna todas as tarefas cadastradas
+        /// </summary>
+        /// <returns>Tarefas cadastradas</returns>
         public SqlDataReader ConsultarTodos()
         {
             return tarefas.ConsultarTodos();
         }
 
-        public SqlDataReader Consultar(String nome)
-        {
-            if (tarefas == null)
-            {
-                tarefas = new TarefasM();
-                tarefas.nome = nome;
-            }
-
-            return tarefas.Consultar();
-        }
         #endregion
     }
 }

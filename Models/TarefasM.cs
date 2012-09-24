@@ -67,29 +67,24 @@ namespace Data.Models
             }
         }
 
-        public void Excluir()
+        /// <summary>
+        /// Remove um registro
+        /// </summary>
+        /// <returns>Valor booleano que informa se foi excluído</returns>
+        public Boolean Remover()
         {
 
-        }
-
-        public SqlDataReader Consultar()
-        {
-            String query = "SELECT * FROM TAREFAS WHERE nome LIKE " + this.nome;
-            SqlConnection conexao = connection.OpenConnection();
-            SqlCommand comando = new SqlCommand(query, conexao);
-
-            SqlDataReader dr = comando.ExecuteReader();
-
-            connection.CloseConnection();
-
-            return dr;
-
+            return true;
         }
 
         #endregion
 
         #region Consultas
 
+        /// <summary>
+        /// Consulta Tarefas
+        /// </summary>
+        /// <returns>Retorna todas as tarefas cadastradas</returns>
         public SqlDataReader ConsultarTodos()
         {
             try

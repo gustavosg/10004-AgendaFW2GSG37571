@@ -64,8 +64,8 @@
                     <asp:Label ID="Label5" runat="server" Text="Sexo"></asp:Label>
                 </td>
                 <td class="style2">
-                    <asp:RadioButtonList ID="Sexo" runat="server" align=left
-                AutoPostBack="True" RepeatDirection="Horizontal" style="text-align: left">
+                    <asp:RadioButtonList ID="Sexo" runat="server" align=left 
+                        RepeatDirection="Horizontal" style="text-align: left">
                         <asp:ListItem>Masculino</asp:ListItem>
                         <asp:ListItem>Feminino</asp:ListItem>
                     </asp:RadioButtonList>
@@ -81,8 +81,11 @@
             </tr>
         </table>
     </asp:Panel>
-    <p>
-        &nbsp;</p>
+    <asp:Panel ID="Panel4" runat="server">
+        <h2 align="center">
+            <asp:Label ID="Aviso" runat="server" ForeColor="Red"></asp:Label>
+        </h2>
+    </asp:Panel>
     <asp:Panel ID="Panel1" runat="server" style="text-align: center">
         <asp:Button ID="Salvar" runat="server" Text="Salvar" 
             style="text-align: center" onclick="Salvar_Click" />

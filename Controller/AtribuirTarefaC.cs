@@ -1,16 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Data.Util;
-using Data.Models;
+﻿#region Referências
+
+using System;
 using System.Data.SqlClient;
+using Data.Models;
+using Data.Util;
+
+#endregion
 
 namespace Data.Controller
 {
     public class AtribuirTarefaC : Singleton<AtribuirTarefaC>
     {
-        #region Fields
+        #region Campos
 
         AtribuirTarefaM atribuirTarefa = AtribuirTarefaM.GetSingleton();
 
@@ -30,17 +31,24 @@ namespace Data.Controller
 
         #endregion
 
-
+        /// <summary>
+        /// Retorna todas as tarefas atribuídas
+        /// </summary>
+        /// <returns>Tarefas atribuídas</returns>
         public SqlDataReader ConsultarTodos()
         {
             return atribuirTarefa.ConsultarTodos();
         }
 
+        /// <summary>
+        /// Remove agendamentos
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Valor lógico que informa se o registro foi removido</returns>
         public Boolean RemoverAgendamentos(Int16 id)
         {
             atribuirTarefa.id = id;
             return atribuirTarefa.RemoverAgendamentos();
         }
-
     }
 }

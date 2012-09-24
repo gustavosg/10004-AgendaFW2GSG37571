@@ -58,6 +58,33 @@ namespace System.Aplicacao.Views.Tarefas {
         protected global::System.Web.UI.WebControls.TextBox nome;
         
         /// <summary>
+        /// Controle Panel4.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel Panel4;
+        
+        /// <summary>
+        /// Controle Aviso.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Aviso;
+        
+        /// <summary>
+        /// Controle Panel3.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel Panel3;
+        
+        /// <summary>
         /// Controle Salvar.
         /// </summary>
         /// <remarks>

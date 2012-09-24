@@ -67,6 +67,15 @@ namespace System.Aplicacao.Views.Locais {
         protected global::System.Web.UI.WebControls.Button Editar;
         
         /// <summary>
+        /// Controle Panel6.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel Panel6;
+        
+        /// <summary>
         /// Controle Aviso.
         /// </summary>
         /// <remarks>

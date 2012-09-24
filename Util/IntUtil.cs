@@ -15,6 +15,14 @@ namespace Data.Util
                 return i;
         }
 
+        public static Int16 ConvertStringToInt16(this String s)
+        {
+            if (s.IsNullOrEmpty())
+                return Convert.ToInt16(0);
+            else
+                return Convert.ToInt16(s);
+        }
+
         public static Boolean IsNullOrEmpty(this Int16 i)
         {
             if (i == null)

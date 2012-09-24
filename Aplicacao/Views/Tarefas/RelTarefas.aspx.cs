@@ -1,25 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+﻿#region Referências
+
 using Data.Controller;
 using Data.DataConnection;
+
+#endregion
 
 namespace System.Aplicacao.Views.Tarefas
 {
     public partial class RelTarefas : System.Web.UI.Page
     {
-        #region Fields
+        #region Campos
 
+        // Conexão
         ConnectionUtil conexao = ConnectionUtil.GetSingleton();
 
+        // Controller
         TarefasC tarefas = TarefasC.GetSingleton();
 
         #endregion
 
-        #region Methods
+        #region Métodos
 
         protected void Page_Load(object sender, EventArgs e)
         {

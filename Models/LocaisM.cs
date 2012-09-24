@@ -30,7 +30,7 @@ namespace Data.Models
         /// <returns>Valor bool que informa se foi atualizado com sucesso</returns>
         public Boolean Atualizar()
         {
-            String query = "UPDATE LOCAIS SET nome = '" + this.nome + "' WHERE id = '"+ this.id + "'";
+            String query = "UPDATE LOCAIS SET nome = '" + this.nome + "' WHERE id = '" + this.id + "'";
 
             try
             {
@@ -39,7 +39,7 @@ namespace Data.Models
 
                 comando.ExecuteNonQuery();
                 connection.CloseConnection();
-                
+
                 return true;
             }
             catch (Exception ex)
@@ -47,7 +47,29 @@ namespace Data.Models
                 throw ex;
             }
         }
-        
+
+        /// <summary>
+        /// Remove um registro
+        /// </summary>
+        /// <returns>Valor bool que informa se foi removido com sucesso</returns>
+        public Boolean Remover()
+        {
+            String query = "DELETE FROM LOCAIS WHERE id LIKE = '" + this.id + "'";
+            try
+            {
+                SqlConnection conexao = connection.OpenConnection();
+                SqlCommand comando = new SqlCommand(query, conexao);
+                comando.ExecuteNonQuery();
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
         /// <summary>
         /// Insere um novo local no BD
         /// </summary>

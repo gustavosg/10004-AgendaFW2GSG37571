@@ -22,7 +22,13 @@
             </tr>
         </table>
     </asp:Panel>
-    <p align="center">
-        <asp:Button ID="Salvar" runat="server" onclick="Salvar_Click" Text="Salvar" />
-    </p>
+    <asp:Panel ID="Panel4" runat="server" HorizontalAlign="Center">
+        <h2>
+            <asp:Label ID="Aviso" runat="server" ForeColor="Red"></asp:Label>
+        </h2>
+    </asp:Panel>
+    <asp:Panel ID="Panel3" runat="server" HorizontalAlign="Center">
+        <asp:Button ID="Salvar" runat="server" onclick="Salvar_Click" 
+    Text="Salvar" />
+    </asp:Panel>
 </asp:Content>

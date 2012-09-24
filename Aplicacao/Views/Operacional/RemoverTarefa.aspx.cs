@@ -1,7 +1,11 @@
-﻿using System.Collections.Generic;
+﻿#region Referências
+
+using System.Collections.Generic;
 using System.Web.UI.WebControls;
-using Data.DataConnection;
 using Data.Controller;
+using Data.DataConnection;
+
+#endregion
 
 namespace System.Aplicacao.Views.Operacional
 {
@@ -9,10 +13,13 @@ namespace System.Aplicacao.Views.Operacional
     {
         #region Campos
 
+        // Conexão
         ConnectionUtil conexao = ConnectionUtil.GetSingleton();
 
+        // Controller
         AtribuirTarefaC atribuirTarefa = AtribuirTarefaC.GetSingleton();
 
+        //Variáveis
         List<Int16> ids = new List<Int16>();
 
         #endregion
@@ -21,12 +28,7 @@ namespace System.Aplicacao.Views.Operacional
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (this.IsPostBack)
-            {
-                CarregarTarefasAtribuidas();
-            }
-            else
-            { }
+            CarregarTarefasAtribuidas();
         }
 
         /// <summary>

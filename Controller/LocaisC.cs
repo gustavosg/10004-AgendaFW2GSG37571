@@ -28,8 +28,15 @@ namespace Data.Controller
             return locais.Salvar();
         }
 
-        public void Excluir(Int16 id = 0, String nome = "")
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public Boolean Remover(Int16 id )
         {
+            locais.id = id;
+            return locais.Remover();
 
         }
 

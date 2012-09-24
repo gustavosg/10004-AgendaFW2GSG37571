@@ -1,24 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using Data.DataConnection;
-using Data.Controller;
+﻿#region Referências
+
 using System.Drawing;
+using Data.Controller;
+using Data.DataConnection;
+using Data.Util;
+
+#endregion
 
 namespace System.Aplicacao.Views.Pessoas
 {
     public partial class EdPessoas : System.Web.UI.Page
     {
-        #region fields
+        #region Campos
 
+        // Conexão
         ConnectionUtil conexao = ConnectionUtil.GetSingleton();
 
+        // Controllers
         PessoasC pessoas = PessoasC.GetSingleton();
 
         #endregion
+
+        #region Métodos
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -26,7 +29,7 @@ namespace System.Aplicacao.Views.Pessoas
         }
 
         /// <summary>
-        /// 
+        /// Prepara os dados para edição
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -41,8 +44,9 @@ namespace System.Aplicacao.Views.Pessoas
             else
             {
                 id.Text = gvPessoas.SelectedRow.Cells[1].Text.Trim();
-                nome.Text = HttpUtility.HtmlDecode(gvPessoas.SelectedRow.Cells[2].Text.Trim());
-                login.Text = HttpUtility.HtmlDecode(gvPessoas.SelectedRow.Cells[3].Text.Trim());
+                nome.Text = gvPessoas.SelectedRow.Cells[2].Text.Trim().ConvertStringToHTMLDecode();
+                login.Text = gvPessoas.SelectedRow.Cells[3].Text.Trim().ConvertStringToHTMLDecode();
+            
                 switch (gvPessoas.SelectedRow.Cells[4].Text.Trim())
                 {
                     case ("M"):
@@ -63,14 +67,22 @@ namespace System.Aplicacao.Views.Pessoas
             }
         }
 
+        /// <summary>
+        /// Atualiza um registro
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void Atualizar_Click(Object sender, EventArgs e)
         {
             if (nome.Text.Trim().Equals(String.Empty))
                 Aviso.Text = "Campo nome não permitido ficar vazio!";
 
-            if (senha.Text.Equals(confirmarSenha.Text) && !senha.Text.Equals(String.Empty))
+            if (!senha.Text.Trim().Equals(confirmarSenha.Text.Trim()))
+                Aviso.Text = "As senhas devem ser iguais!";
+
+            if (senha.Text.Trim().Equals(confirmarSenha.Text.Trim()) && !senha.Text.Trim().Equals(String.Empty))
             {
-                if (pessoas.Atualizar(Convert.ToInt16(id.Text), nome.Text, login.Text, senha.Text, sexo.SelectedValue.ToString()[0], Convert.ToInt16(idade.Text)))
+                if (pessoas.Atualizar(id.Text.ConvertStringToInt16(), nome.Text.Trim(), login.Text.Trim(), senha.Text.Trim(), sexo.SelectedValue.ToString()[0], idade.Text.ConvertStringToInt16()))
                     Response.Write("Registro atualizado!");
 
                 CarregarGridPessoas();
@@ -83,6 +95,9 @@ namespace System.Aplicacao.Views.Pessoas
             }
         }
 
+        /// <summary>
+        /// Popula a grade de pessoas
+        /// </summary>
         private void CarregarGridPessoas()
         {
             gvPessoas.DataSource = pessoas.ConsultarTodos();
@@ -91,5 +106,6 @@ namespace System.Aplicacao.Views.Pessoas
             conexao.CloseConnection();
         }
 
+        #endregion
     }
 }

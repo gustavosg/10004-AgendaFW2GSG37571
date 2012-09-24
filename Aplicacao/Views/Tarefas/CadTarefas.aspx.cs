@@ -1,18 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+﻿#region Referências
+
 using Data.Controller;
-using Data.DataConnection;
+
+#endregion
 
 namespace System.Aplicacao.Views.Tarefas
 {
     public partial class CadTarefas : System.Web.UI.Page
     {
-        #region Fields
+        #region Campos
 
+        // Controller
         TarefasC tarefas = TarefasC.GetSingleton();
 
         #endregion
@@ -22,11 +20,18 @@ namespace System.Aplicacao.Views.Tarefas
 
         }
 
+        /// <summary>
+        /// Salva um registro
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void Salvar_Click(object sender, EventArgs e)
         {
             if (!nome.Text.Trim().Equals(String.Empty))
                 if (tarefas.Salvar(nome.Text.Trim()))
-                    Response.Write("Registro Salvo!");
+                    Aviso.Text = "Registro Salvo!";
+                else
+                    Aviso.Text = "Erro ao gravar registro! Favor verificar log!";
 
         }
     }

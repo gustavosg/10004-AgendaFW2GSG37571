@@ -82,7 +82,7 @@ namespace Data.Models
         {
             try
             {
-                String query = "UPDATE PESSOAS SET nome = '" + this.nome + "', login = '" + this.login + "', senha = '"+ this.senha + "',  sexo = '" + this.sexo + "', idade = '" + this.idade + "' WHERE id LIKE '" + this.id + "'";
+                String query = "UPDATE PESSOAS SET nome = '" + this.nome + "', login = '" + this.login + "', senha = '" + this.senha + "',  sexo = '" + this.sexo + "', idade = '" + this.idade + "' WHERE id LIKE '" + this.id + "'";
                 SqlConnection conexao = connection.OpenConnection();
                 SqlCommand comando = new SqlCommand(query, conexao);
 
@@ -93,21 +93,28 @@ namespace Data.Models
             }
             catch (Exception ex)
             {
-                throw ex; 
+                throw ex;
             }
         }
 
-        public void Excluir(String option)
+        public Boolean Excluir()
         {
-            String query = String.Empty;
-            if (option.Equals(""))
-                query = "DELETE FROM PESSOAS WHERE ID LIKE (" + this.id + ")";
-            else
-                query = "DELETE FROM PESSOAS WHERE nome LIKE (" + this.nome + ")";
-            SqlConnection conexao = connection.OpenConnection();
-            SqlCommand comando = new SqlCommand(query, conexao);
+            try
+            {
+                String query = "DELETE FROM PESSOAS WHERE ID LIKE ('" + this.id + "')";
+                
+                SqlConnection conexao = connection.OpenConnection();
+                SqlCommand comando = new SqlCommand(query, conexao);
 
-            connection.CloseConnection();
+                comando.ExecuteNonQuery();
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
 
         /// <summary>

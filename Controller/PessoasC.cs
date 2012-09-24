@@ -88,23 +88,13 @@ namespace Data.Controller
         /// </summary>
         /// <param name="id"></param>
         /// <param name="nome"></param>
-        public void Remover(Int16 id = 0, String nome = "")
+        public Boolean Remover(Int16 id = 0)
         {
-            String option = String.Empty;
+            pessoas.id = id;
 
-            if (id != 0)
-            {
-                pessoas.id = id;
-                option = "id";
-            }
-            if (!nome.Equals(String.Empty))
-            {
-                pessoas.nome = nome;
-                option = "nome";
-            }
-            pessoas.Excluir(option);
+            return pessoas.Excluir();
         }
-        
+
         #endregion
 
     }

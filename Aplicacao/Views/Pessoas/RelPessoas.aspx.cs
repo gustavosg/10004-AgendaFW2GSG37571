@@ -1,41 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+﻿#region Referências
+
 using Data.Controller;
-using Data.Util;
 using Data.DataConnection;
+
+#endregion
 
 namespace System.Aplicacao.Views.Pessoas
 {
     public partial class RelPessoas : System.Web.UI.Page
     {
+        #region Campos
 
-        #region fields
-
-        PessoasC pessoas = PessoasC.GetSingleton();
+        // Conexão
         ConnectionUtil connection = ConnectionUtil.GetSingleton();
+
+        // Controller
+        PessoasC pessoas = PessoasC.GetSingleton();
 
         #endregion
 
+        #region Métodos
+
         protected void Page_Load(object sender, EventArgs e)
         {
-
             gvPessoas.DataSource = pessoas.ConsultarTodos();
             gvPessoas.DataBind();
 
             connection.CloseConnection();
-
-
         }
 
-        protected void Editar_Click(object sender, EventArgs e)
-        {
-            Response.Write("oi");
-        }
-
-       
+        #endregion
     }
 }

@@ -1,25 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+﻿#region Referências
+
 using Data.Controller;
 using Data.DataConnection;
+
+#endregion
 
 namespace System.Aplicacao.Views.Locais
 {
     public partial class RelLocais : System.Web.UI.Page
     {
-        #region Fields
+        #region Campos
 
+        // Conexão
         ConnectionUtil conexao = ConnectionUtil.GetSingleton();
 
+        // Controller
         LocaisC locais = LocaisC.GetSingleton();
 
         #endregion
 
-        #region Methods
+        #region Métodos
 
         /// <summary>
         /// Page_load

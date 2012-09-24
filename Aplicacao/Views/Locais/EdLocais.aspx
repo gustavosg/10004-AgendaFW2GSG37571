@@ -33,9 +33,14 @@
     <br />
     <asp:Panel ID="Panel5" runat="server" HorizontalAlign="Center">
         <asp:Button ID="Editar" runat="server" OnClick="Editar_Click" Text="Editar" />
-        <br />
-        <asp:Label ID="Aviso" runat="server" Text=""></asp:Label>
+        
     </asp:Panel>
+    <asp:Panel ID="Panel6" runat="server" HorizontalAlign=Center>
+    <h2>
+        <asp:Label ID="Aviso" runat="server" Text="" ForeColor=Red></asp:Label>
+        </h2>
+    </asp:Panel>
+
     <asp:Panel ID="Panel3" runat="server">
         <h2 align="center">
             <asp:Label ID="Label7" runat="server" Style="text-align: center" 
