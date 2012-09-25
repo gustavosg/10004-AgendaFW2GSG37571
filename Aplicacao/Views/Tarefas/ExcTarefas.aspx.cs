@@ -74,6 +74,8 @@ namespace System.Aplicacao.Views.Tarefas
                 else
                     Aviso.Text = "Houve erro ao remover, favor consultar log!";
 
+            conexao.CloseConnection();
+
             CarregarGridTarefas();
         }
 

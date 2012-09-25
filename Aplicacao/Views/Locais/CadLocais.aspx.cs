@@ -19,7 +19,7 @@ namespace System.Aplicacao.Views.Locais
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (this.IsPostBack)
+            if (!this.IsPostBack)
                 nome.Text = String.Empty;
             
         }

@@ -11,10 +11,9 @@ namespace Aplicacao
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["User"].ToString() == null)
-            {
-                Response.Redirect("Account/Login.aspx");
-            }
+            String currentUrl = Request.ServerVariables["SCRIPT_NAME"].ToString().Trim();
+            if (!currentUrl.Contains("Login.aspx") && Session.Keys.Count.Equals(0))
+                Response.Redirect("~/Account/Login.aspx");
         }
     }
 }

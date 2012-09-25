@@ -31,6 +31,24 @@ namespace System.Aplicacao.Account {
         protected global::System.Web.UI.WebControls.Login Login1;
         
         /// <summary>
+        /// Controle Panel1.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel Panel1;
+        
+        /// <summary>
+        /// Controle Aviso.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Aviso;
+        
+        /// <summary>
         /// Controle RegisterHyperLink.
         /// </summary>
         /// <remarks>

@@ -83,7 +83,7 @@ namespace System.Aplicacao.Views.Pessoas
             if (senha.Text.Trim().Equals(confirmarSenha.Text.Trim()) && !senha.Text.Trim().Equals(String.Empty))
             {
                 if (pessoas.Atualizar(id.Text.ConvertStringToInt16(), nome.Text.Trim(), login.Text.Trim(), senha.Text.Trim(), sexo.SelectedValue.ToString()[0], idade.Text.ConvertStringToInt16()))
-                    Response.Write("Registro atualizado!");
+                   Aviso.Text = "Registro atualizado!";
 
                 CarregarGridPessoas();
             }

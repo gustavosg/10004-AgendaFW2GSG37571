@@ -28,7 +28,10 @@ namespace System.Aplicacao.Views.Operacional
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            CarregarTarefasAtribuidas();
+            if (this.IsPostBack)
+            { }
+            else
+                CarregarTarefasAtribuidas();
         }
 
         /// <summary>
@@ -80,6 +83,8 @@ namespace System.Aplicacao.Views.Operacional
 
             // Fecha Conexão
             conexao.CloseConnection();
+
+            CarregarTarefasAtribuidas();
         }
         #endregion
     }

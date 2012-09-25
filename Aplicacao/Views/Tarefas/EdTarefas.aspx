@@ -34,7 +34,7 @@
         <asp:Button ID="Editar" runat="server" onclick="Editar_Click" Text="Editar" />
           <br />
         <h2>
-            <asp:Label ID="Aviso" runat="server" Text=""></asp:Label>
+            <asp:Label ID="Aviso" runat="server" ForeColor="Red"></asp:Label>
         </h2>
     </asp:Panel>
     <asp:Panel ID="Panel2" runat="server" >

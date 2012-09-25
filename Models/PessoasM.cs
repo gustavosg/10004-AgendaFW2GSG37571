@@ -33,7 +33,7 @@ namespace Data.Models
         public Boolean Login()
         {
 
-            String query = "SELECT * FROM PESSOAS WHERE nome = '" + this.nome + "'  AND senha = '" + this.senha + "'";
+            String query = "SELECT * FROM PESSOAS WHERE login = '" + this.nome + "' AND senha = '" + this.senha + "'";
             Boolean teste = false;
 
             try

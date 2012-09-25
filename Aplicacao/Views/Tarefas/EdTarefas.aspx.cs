@@ -55,7 +55,7 @@ namespace System.Aplicacao.Views.Tarefas
         {
             if (!nome.Text.Trim().Equals(String.Empty))
                 if (tarefas.Atualizar(Convert.ToInt16(id.Text), nome.Text))
-                    Response.Write("Registro atualizado!");
+                    Aviso.Text = "Registro atualizado!";
 
             ConsultarDados();
         }

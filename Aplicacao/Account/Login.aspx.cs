@@ -15,28 +15,34 @@ namespace System.Aplicacao.Account
         #region Fields
 
         PessoasC pessoas = new PessoasC();
-        
 
         #endregion
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            RegisterHyperLink.NavigateUrl = "Register.aspx?ReturnUrl=" + HttpUtility.UrlEncode(Request.QueryString["ReturnUrl"]);
+         
         }
 
-
-       
         protected void LoginButton_Click(object sender, EventArgs e)
         {
-            //Response.Write(pessoas.login(nome.Text, senha.Text));
-            if (pessoas.login(Login1.UserName, Login1.Password))
+            try
             {
-                
-                
-                RegisterHyperLink.NavigateUrl = "Register.aspx?ReturnUrl=" + HttpUtility.UrlEncode(Request.QueryString["ReturnUrl"]);
-
+                if (pessoas.login(Login1.UserName, Login1.Password))
+                {
+                    Session["username"] = Login1.UserName.ToString().Trim();
+                    FormsAuthentication.SetAuthCookie(Session["username"].ToString().Trim(), true);
+                    Response.Redirect("~/Default.aspx");
+                }
+                else
+                {
+                    Response.Redirect("Account/Login.aspx");
+                }
             }
-        }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
 
+        }
     }
 }

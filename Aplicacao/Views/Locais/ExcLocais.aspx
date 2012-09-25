@@ -10,7 +10,7 @@
             <Columns>
                 <asp:TemplateField HeaderText="Selecionar">
                     <ItemTemplate>
-                        <asp:CheckBox ID="CheckBox1" runat="server" />
+                        <asp:CheckBox ID="cbxSelecionar" runat="server" />
                     </ItemTemplate>
                 </asp:TemplateField>
                 <asp:BoundField DataField="id" HeaderText="Código" />

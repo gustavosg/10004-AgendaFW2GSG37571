@@ -73,7 +73,20 @@ namespace Data.Models
         /// <returns>Valor booleano que informa se foi excluído</returns>
         public Boolean Remover()
         {
+            try
+            {
+                String query = "DELETE FROM TAREFAS WHERE id LIKE '" + this.id + "'";
+                SqlConnection conexao = connection.OpenConnection();
+                SqlCommand comando = new SqlCommand(query, conexao);
 
+                comando.ExecuteNonQuery();
+                
+            }
+            catch (Exception ex)
+            {
+                
+                throw ex;
+            }
             return true;
         }
 

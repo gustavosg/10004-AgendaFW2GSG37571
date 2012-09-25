@@ -6,7 +6,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <asp:Panel ID="Panel1" runat="server">
         <h1>
-            <asp:Label ID="Label1" runat="server" Text="EDITAR TAREFAS"></asp:Label>
+            <asp:Label ID="Label1" runat="server" Text="EXCLUIR TAREFAS"></asp:Label>
         </h1>
     </asp:Panel>
     <asp:Panel ID="Panel3" runat="server" HorizontalAlign="Center" Style="margin-top: 0px">

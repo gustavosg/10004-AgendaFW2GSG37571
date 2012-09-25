@@ -54,7 +54,7 @@ namespace Data.Models
         /// <returns>Valor bool que informa se foi removido com sucesso</returns>
         public Boolean Remover()
         {
-            String query = "DELETE FROM LOCAIS WHERE id LIKE = '" + this.id + "'";
+            String query = "DELETE FROM LOCAIS WHERE id LIKE '" + this.id + "'";
             try
             {
                 SqlConnection conexao = connection.OpenConnection();
