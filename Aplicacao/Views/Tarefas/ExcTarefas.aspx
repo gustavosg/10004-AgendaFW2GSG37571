@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"
+﻿<%@ Page Title="Excluir Tarefas" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"
     CodeBehind="ExcTarefas.aspx.cs" Inherits="System.Aplicacao.Views.Tarefas.ExcTarefas" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">

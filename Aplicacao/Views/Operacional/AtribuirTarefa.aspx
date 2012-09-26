@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"
+﻿<%@ Page Title="AtribuirTarefa" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"
     CodeBehind="AtribuirTarefa.aspx.cs" Inherits="System.Aplicacao.Views.Operacional.AtribuirTarefa" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">

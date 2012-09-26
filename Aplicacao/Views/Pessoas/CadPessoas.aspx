@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CadPessoas.aspx.cs" Inherits="System.Aplicacao.Views.Pessoas.CadPessoas" %>
+﻿<%@ Page Title="Cadastro de Pessoas" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CadPessoas.aspx.cs" Inherits="System.Aplicacao.Views.Pessoas.CadPessoas" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
     <style type="text/css">
         .style1

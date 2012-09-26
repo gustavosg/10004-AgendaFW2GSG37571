@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"
+﻿<%@ Page Title="Cadastro de Tarefas" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"
     CodeBehind="CadTarefas.aspx.cs" Inherits="System.Aplicacao.Views.Tarefas.CadTarefas" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
