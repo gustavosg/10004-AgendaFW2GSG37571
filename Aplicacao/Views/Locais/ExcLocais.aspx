@@ -2,6 +2,12 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+    <asp:Panel ID="Panel4" runat="server" HorizontalAlign="Center">
+        <h2>
+            <asp:Label ID="Label1" runat="server" Text="EXCLUIR LOCAIS"></asp:Label>
+        </h2>
+    </asp:Panel>
+    <br />
     <asp:Panel ID="Panel1" runat="server">
         <asp:GridView ID="gvLocais" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None"
             Style="text-align: center" HorizontalAlign="Center" 

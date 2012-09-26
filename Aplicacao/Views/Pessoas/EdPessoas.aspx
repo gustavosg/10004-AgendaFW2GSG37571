@@ -6,7 +6,8 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <asp:Panel ID="Panel1" runat="server" HorizontalAlign="Center">
         <h1>
-            <asp:Label ID="Label1" runat="server" Style="text-align: center" Text="Alteração de Dados de Pessoas"></asp:Label>
+            <asp:Label ID="Label1" runat="server" Style="text-align: center" 
+                Text="EDIÇÃO DE DADOS DE PESSOAS"></asp:Label>
         </h1>
     </asp:Panel>
     <br />

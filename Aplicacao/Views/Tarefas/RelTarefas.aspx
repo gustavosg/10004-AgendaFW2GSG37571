@@ -11,7 +11,8 @@
     <br />
     <asp:GridView ID="gvTarefas" runat="server" 
     CellPadding="4" ForeColor="#333333" GridLines="None" 
-        AutoGenerateColumns="False" HorizontalAlign="Center">
+        AutoGenerateColumns="False" HorizontalAlign="Center" 
+        style="text-align: center" Width="600px">
         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
         <Columns>
             <asp:BoundField DataField="id" HeaderText="Código" />

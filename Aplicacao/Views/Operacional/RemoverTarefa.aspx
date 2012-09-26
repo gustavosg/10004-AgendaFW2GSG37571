@@ -7,7 +7,6 @@
             <asp:Label ID="Label1" runat="server" Text="REMOVER TAREFAS À PARTICIPANTES"></asp:Label>
         </h1>
     </asp:Panel>
-    <br />
     <asp:Panel ID="Panel2" runat="server">
         <table style="width: 100%;">
             <tr>

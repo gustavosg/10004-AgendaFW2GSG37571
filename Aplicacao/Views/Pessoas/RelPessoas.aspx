@@ -7,14 +7,14 @@
     <asp:Panel ID="Panel1" runat="server" HorizontalAlign="Center" >
         <h1>
             <asp:Label ID="Label1" runat="server" style="text-align: center" 
-                Text="Relatório de Pessoas"></asp:Label>
+                Text="RELATÓRIO DE PESSOAS"></asp:Label>
         </h1>
     </asp:Panel>
     <br />
     <asp:Panel ID="Panel2" runat="server">
         <asp:GridView ID="gvPessoas" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None"
             Style="text-align: center" HorizontalAlign="Center" 
-            AutoGenerateColumns="False" 
+            AutoGenerateColumns="False" Width="800px" 
             >
             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
             <Columns>

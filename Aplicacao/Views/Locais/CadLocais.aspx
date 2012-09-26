@@ -16,7 +16,8 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <asp:Panel ID="Panel2" runat="server">
         <h1 align="center">
-            <asp:Label ID="Label1" runat="server" Style="text-align: center" Text="Cadastro de Locais"></asp:Label>
+            <asp:Label ID="Label1" runat="server" Style="text-align: center" 
+                Text="CADASTRO DE LOCAIS"></asp:Label>
         </h1>
     </asp:Panel>
     <asp:Panel ID="Panel3" runat="server" HorizontalAlign="Justify">

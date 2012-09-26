@@ -15,5 +15,10 @@ namespace Aplicacao
             if (!currentUrl.Contains("Login.aspx") && Session.Keys.Count.Equals(0))
                 Response.Redirect("~/Account/Login.aspx");
         }
+
+        protected void HeadLoginStatus_LoggingOut(object sender, LoginCancelEventArgs e)
+        {
+            Session.Clear();
+        }
     }
 }

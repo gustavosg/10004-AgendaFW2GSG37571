@@ -15,8 +15,7 @@
         <div class="header">
             <div class="title">
                 <h1>
-                    My ASP.NET Application
-                </h1>
+                    Trabalho final framework web 2</h1>
             </div>
             <div class="loginDisplay">
                 <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
@@ -24,15 +23,17 @@
                         [ <a href="~/Account/Login.aspx" ID="HeadLoginStatus" runat="server">Log In</a> ]
                     </AnonymousTemplate>
                     <LoggedInTemplate>
-                        Welcome <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" /></span>!
-                        [ <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out" LogoutPageUrl="~/"/> ]
+                        Seja bem-vindo <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" /></span>!
+                        [ <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" 
+                            LogoutText="Sair do sistema" LogoutPageUrl="~/" 
+                            onloggingout="HeadLoginStatus_LoggingOut"/> ]
                     </LoggedInTemplate>
                 </asp:LoginView>
             </div>
             <div class="clear hideSkiplink">
                 <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
                     <Items>
-                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home"/>
+                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Início"/>
                         <asp:MenuItem Text="Cadastros" Value="Cadastros">
                             <asp:MenuItem NavigateUrl="~/Views/Pessoas/CadPessoas.aspx" Text="Pessoas" 
                                 Value="Pessoas"></asp:MenuItem>
@@ -73,7 +74,7 @@
                             <asp:MenuItem NavigateUrl="~/Views/Locais/RelLocais.aspx" Text="Locais" 
                                 Value="Locais"></asp:MenuItem>
                         </asp:MenuItem>
-                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="About"/>
+                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="Sobre"/>
                     </Items>
                 </asp:Menu>
             </div>

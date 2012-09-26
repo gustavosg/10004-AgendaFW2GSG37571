@@ -5,7 +5,7 @@
     <asp:Panel ID="Panel1" runat="server" HorizontalAlign="Center">
         <h1>
             <asp:Label ID="Label1" runat="server" Style="text-align: center" 
-                Text="ALTERAÇÃO DE LOCAIS"></asp:Label>
+                Text="EDITAR LOCAIS"></asp:Label>
         </h1>
     </asp:Panel>
     <br />
@@ -49,7 +49,7 @@
     </asp:Panel>
     <br />
     <asp:Panel ID="Panel4" runat="server">
-        <table align="center" style="width: 36%;">
+        <table align="center" width="200px" >
             <tr>
                 <td class="style3">
                     <asp:Label ID="Label8" runat="server" Text="Código"></asp:Label>

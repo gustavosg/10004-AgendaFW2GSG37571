@@ -19,7 +19,7 @@
     <asp:Panel ID="Panel2" runat="server">
         <h1 align="center">
             <asp:Label ID="Label1" runat="server" style="text-align: center" 
-                Text="Cadastro de Pessoas"></asp:Label>
+                Text="CADASTRO DE PESSOAS"></asp:Label>
         </h1>
         <p align="center">
             &nbsp;</p>

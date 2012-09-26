@@ -5,13 +5,13 @@
     <asp:Panel ID="Panel1" runat="server" HorizontalAlign="Center" >
         <h1>
             <asp:Label ID="Label1" runat="server" style="text-align: center" 
-                Text="Relatório de Locais"></asp:Label>
+                Text="RELATÓRIO DE LOCAIS"></asp:Label>
         </h1>
     </asp:Panel>
     <br />
     <asp:Panel ID="Panel2" runat="server">
         <asp:GridView ID="gvLocais" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None"
-            Style="text-align: center" HorizontalAlign="Center">
+            Style="text-align: center" HorizontalAlign="Center" Width="800px">
             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
             <EditRowStyle BackColor="#999999" />
             <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
