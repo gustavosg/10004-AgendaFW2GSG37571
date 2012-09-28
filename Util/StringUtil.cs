@@ -5,25 +5,12 @@ namespace Data.Util
 {
     public static class StringUtil
     {
-        public static String ConvertInt16ToString(this Int16 i)
+        public static String ConvertInt16ToString(this Int16? i)
         {
             if (i.IsNullOrEmpty())
                 return String.Empty;
             else
                 return Convert.ToString(i);
-        }
-
-        /// <summary>
-        /// Verifica se campo informado é vazio ou não
-        /// </summary>
-        /// <param name="s"></param>
-        /// <returns>Valor booleano</returns>
-        public static Boolean IsNullOrEmpty(this String s)
-        {
-            if (s == null)
-                return true;
-            else
-                return false;
         }
 
         /// <summary>

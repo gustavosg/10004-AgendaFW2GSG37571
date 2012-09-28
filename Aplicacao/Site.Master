@@ -74,6 +74,8 @@
                             <asp:MenuItem NavigateUrl="~/Views/Locais/RelLocais.aspx" Text="Locais" 
                                 Value="Locais"></asp:MenuItem>
                         </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Views/RegistroLogs/ExibirLog.aspx" 
+                            Text="Logs do Sistema" Value="Logs do Sistema"></asp:MenuItem>
                         <asp:MenuItem NavigateUrl="~/About.aspx" Text="Sobre"/>
                     </Items>
                 </asp:Menu>

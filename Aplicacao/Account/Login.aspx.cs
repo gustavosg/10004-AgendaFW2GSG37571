@@ -14,7 +14,8 @@ namespace System.Aplicacao.Account
     {
         #region Fields
 
-        PessoasC pessoas = new PessoasC();
+        PessoasC pessoas = PessoasC.GetSingleton();
+        Log log = Log.GetSingleton();
 
         #endregion
 
@@ -31,7 +32,9 @@ namespace System.Aplicacao.Account
                 {
                     Session["username"] = Login1.UserName.ToString().Trim();
                     FormsAuthentication.SetAuthCookie(Session["username"].ToString().Trim(), true);
-                    Response.Redirect("~/Default.aspx");
+                    log.Info("Usuário logado: " + Login1.UserName.Trim(), Login1.UserName.Trim());
+                    FormsAuthentication.RedirectFromLoginPage(Session["username"].ToString(), true);
+                   // Response.Redirect("~/Default.aspx");
                 }
                 else
                 {
@@ -40,6 +43,7 @@ namespace System.Aplicacao.Account
             }
             catch (Exception ex)
             {
+                log.Error("Tentativa de login inválida com o seguinte login: " + Login1.UserName + "\n Segue dados completos: " + ex.Message, "");
                 throw ex;
             }
 

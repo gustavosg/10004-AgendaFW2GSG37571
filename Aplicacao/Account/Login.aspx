@@ -50,6 +50,8 @@
                                     <td align="right" colspan="2">
                                         <asp:Button ID="LoginButton" runat="server" CommandName="Login" Text="Fazer Logon"
                                             ValidationGroup="Login1" OnClick="LoginButton_Click" />
+                                        <br />
+                                        <br />
                                     </td>
                                 </tr>
                             </table>

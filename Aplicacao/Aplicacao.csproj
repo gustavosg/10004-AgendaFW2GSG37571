@@ -73,6 +73,7 @@
     <Content Include="Views\Pessoas\EdPessoas.aspx" />
     <Content Include="Views\Pessoas\ExcPessoas.aspx" />
     <Content Include="Views\Pessoas\RelPessoas.aspx" />
+    <Content Include="Views\RegistroLogs\ExibirLog.aspx" />
     <Content Include="Views\Tarefas\CadTarefas.aspx" />
     <Content Include="Views\Tarefas\EdTarefas.aspx" />
     <Content Include="Views\Tarefas\ExcTarefas.aspx" />
@@ -208,6 +209,13 @@
     </Compile>
     <Compile Include="Views\Pessoas\RelPessoas.aspx.designer.cs">
       <DependentUpon>RelPessoas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RegistroLogs\ExibirLog.aspx.cs">
+      <DependentUpon>ExibirLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\RegistroLogs\ExibirLog.aspx.designer.cs">
+      <DependentUpon>ExibirLog.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Tarefas\CadTarefas.aspx.cs">
       <DependentUpon>CadTarefas.aspx</DependentUpon>
