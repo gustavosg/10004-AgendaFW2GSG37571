@@ -19,6 +19,14 @@ namespace Data.Controller
 
         #region Metodos
 
+        /// <summary>
+        /// Marca tarefas na agenda para a pessoa escolhida
+        /// </summary>
+        /// <param name="pessoas">Dados da pessoa</param>
+        /// <param name="tarefa">Tarefa selecionada</param>
+        /// <param name="local">Local selecionado</param>
+        /// <param name="data">Data informada</param>
+        /// <returns>Retorna valor lógico que informa se foi marcado tarefa</returns>
         public Boolean MarcarTarefas(Int16 pessoas, Int16 tarefa, Int16 local, DateTime data)
         {
             atribuirTarefa.id_pessoas = pessoas;

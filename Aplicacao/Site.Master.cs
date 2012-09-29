@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
+﻿#region Referências
+
+using System;
 using System.Web.UI.WebControls;
 using Data.Util;
+
+#endregion
 
 namespace Aplicacao
 {
@@ -12,6 +12,7 @@ namespace Aplicacao
     {
         #region Campos
 
+        // Registro de logs
         Log log = Log.GetSingleton();
 
         #endregion

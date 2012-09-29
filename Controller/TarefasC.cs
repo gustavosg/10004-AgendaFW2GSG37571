@@ -1,35 +1,37 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿#region Referências
 
-using Data.Util;
-using Data.Models;
+using System;
 using System.Data.SqlClient;
+using Data.Models;
+using Data.Util;
+
+#endregion
 
 namespace Data.Controller
 {
     public class TarefasC : Singleton<TarefasC>
     {
-        #region Fields
+        #region Campos
 
+        // Controller
         TarefasM tarefas = TarefasM.GetSingleton();
 
         #endregion
 
-        #region Methods
+        #region Métodos
 
         public Boolean Atualizar(Int16 id, String nome)
         {
             tarefas.id = id;
             tarefas.nome = nome;
+            
             return tarefas.Atualizar();
-
         }
 
         public Boolean Salvar(String nome)
         {
             tarefas.nome = nome;
+         
             return tarefas.Salvar();
         }
 
@@ -41,9 +43,8 @@ namespace Data.Controller
         public Boolean Remover(Int16 id = 0)
         {
             tarefas.id = id;
-
+            
             return tarefas.Remover();
-
         }
 
         /// <summary>

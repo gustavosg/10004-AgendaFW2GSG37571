@@ -10,15 +10,15 @@ namespace System.Aplicacao.Views.Locais
     public partial class CadLocais : System.Web.UI.Page
     {
         #region Campos
-
-        // Variáveis
-        String usuario = String.Empty;
-        
+               
         // Controller
         LocaisC locais = LocaisC.GetSingleton();
 
         //Logs
         Log log = Log.GetSingleton();
+
+        // Variáveis
+        String usuario = String.Empty;
 
         #endregion
 
@@ -46,7 +46,10 @@ namespace System.Aplicacao.Views.Locais
                         log.Info("Local inserido no sistema: " + locais.ToString(), usuario);
                     }
                     else
+                    {
                         Aviso.Text = "É necessário um nome para cadastrar um novo local!";
+                        log.Info("Não foi possível inserir um novo local pois não foi informado o nome.", usuario);
+                    }
             }
             catch (Exception ex)
             {

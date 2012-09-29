@@ -1,19 +1,24 @@
-﻿using System;
+﻿#region Referências
+
+using System;
+using System.Data.SqlClient;
 using Data.Models;
 using Data.Util;
-using System.Data.SqlClient;
+
+#endregion
 
 namespace Data.Controller
 {
     public class LocaisC : Singleton<LocaisC>
     {
-        #region Fields
+        #region Campos
 
+        // Controller
         LocaisM locais = LocaisM.GetSingleton();
 
         #endregion
 
-        #region Properties
+        #region Propriedades
 
         public String ToString()
         {
@@ -34,6 +39,7 @@ namespace Data.Controller
         {
             locais.id = id;
             locais.nome = nome;
+        
             return locais.Atualizar();
         }
 
@@ -45,6 +51,7 @@ namespace Data.Controller
         public Boolean Salvar(String nome)
         {
             locais.nome = nome;
+            
             return locais.Salvar();
         }
 
@@ -56,6 +63,7 @@ namespace Data.Controller
         public Boolean Remover(Int16 id )
         {
             locais.id = id;
+            
             return locais.Remover();
         }
 

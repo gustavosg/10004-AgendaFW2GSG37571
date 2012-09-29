@@ -1,16 +1,19 @@
-﻿using System;
-using System.Data.Sql;
+﻿#region Referências
+
+using System;
+using System.Data.SqlClient;
 using Data.Models;
 using Data.Util;
-using System.Data;
-using System.Data.SqlClient;
+
+#endregion
 
 namespace Data.Controller
 {
     public class PessoasC : Singleton<PessoasC>
     {
-        #region Fields
+        #region Campos
 
+        // Controller
         PessoasM pessoas = PessoasM.GetSingleton();
 
         #endregion
@@ -23,14 +26,18 @@ namespace Data.Controller
         /// <param name="nome"></param>
         /// <param name="senha"></param>
         /// <returns></returns>
-        public Boolean login(String nome, String senha)
+        public Boolean login(String login, String senha)
         {
-            pessoas.nome = nome;
+            pessoas.login = login;
             pessoas.senha = senha;
 
             return pessoas.Login();
         }
 
+        /// <summary>
+        /// Retorna todas as pessoas cadastradas
+        /// </summary>
+        /// <returns>Um objeto contendo todos os resultados</returns>
         public SqlDataReader ConsultarTodos()
         {
             return pessoas.ConsultarTodos();
@@ -41,14 +48,14 @@ namespace Data.Controller
         #region Gravações
 
         /// <summary>
-        /// 
+        /// Atualiza um registro
         /// </summary>
-        /// <param name="nome"></param>
-        /// <param name="login"></param>
-        /// <param name="senha"></param>
-        /// <param name="sexo"></param>
-        /// <param name="idade"></param>
-        /// <returns></returns>
+        /// <param name="nome">Nome da pessoa</param>
+        /// <param name="login">Login do usuário</param>
+        /// <param name="senha">Senha do usuário</param>
+        /// <param name="sexo">Sexo</param>
+        /// <param name="idade">Idade</param>
+        /// <returns>Valor lógico que informa se o registro foi atualizado</returns>
         public Boolean Atualizar(Int16 id, String nome, String login, String senha, Char sexo, Int16 idade)
         {
             pessoas.id = id;
@@ -64,10 +71,10 @@ namespace Data.Controller
         /// <summary>
         /// Grava uma nova Pessoa
         /// </summary>
-        /// <param name="nome"></param>
-        /// <param name="senha"></param>
-        /// <param name="sexo"></param>
-        /// <param name="idade"></param>
+        /// <param name="nome">Nome da pessoa</param>
+        /// <param name="senha">Senha do usuário</param>
+        /// <param name="sexo">Sexo</param>
+        /// <param name="idade">Idade</param>
         public Boolean Salvar(String nome, String login, String senha, Char sexo, Int16 idade)
         {
             pessoas.nome = nome;
@@ -86,8 +93,8 @@ namespace Data.Controller
         /// <summary>
         /// Exclui uma pessoa do sistema
         /// </summary>
-        /// <param name="id"></param>
-        /// <param name="nome"></param>
+        /// <param name="id">Código da pessoa</param>
+        /// <returns>Valor lógico que informa se o registro foi removido</returns>
         public Boolean Remover(Int16 id = 0)
         {
             pessoas.id = id;

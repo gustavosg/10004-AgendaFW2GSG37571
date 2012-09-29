@@ -11,7 +11,7 @@ namespace Data.Models
 {
     public class TarefasM : Singleton<TarefasM>
     {
-        #region Fields
+        #region Campos
 
         // Conexão
         ConnectionUtil connection = ConnectionUtil.GetSingleton();
@@ -19,18 +19,19 @@ namespace Data.Models
         // Log do sistema
         Log log = Log.GetSingleton();
 
-        String usuario = PessoasM.GetSingleton().login;
+        // Usuário logado, que realiza as tarefas do sistema
+        String usuario = PessoasM.GetSingleton().usuarioLogado;
 
         #endregion
 
-        #region Properties
+        #region Propriedades
 
         public Int16 id { get; set; }
         public String nome { get; set; }
 
         public override string ToString()
         {
-            return "Código: " + this.id + ", Tarefa: " + this.nome + ".";
+            return "Tarefa: " + this.nome + ".";
         }
 
         #endregion

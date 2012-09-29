@@ -1,7 +1,11 @@
-﻿using System.Collections.Generic;
+﻿#region Referências
+
+using System.Collections.Generic;
 using System.Web.UI.WebControls;
 using Data.Controller;
 using Data.DataConnection;
+
+#endregion
 
 namespace System.Aplicacao.Views.Operacional
 {

@@ -19,6 +19,9 @@ namespace System.Aplicacao.Views.Locais
         // Controller
         LocaisC locais = LocaisC.GetSingleton();
 
+        // Variáveis
+        String usuario = String.Empty;
+
         #endregion
 
         #region Métodos

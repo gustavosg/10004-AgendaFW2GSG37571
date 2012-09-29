@@ -30,9 +30,7 @@ namespace System.Aplicacao.Views.Pessoas
         protected void Page_Load(object sender, EventArgs e)
         {
             if (this.IsPostBack)
-            {
-
-            }
+            { }
             else
             {
                 CarregarGridPessoas();

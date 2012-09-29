@@ -1,27 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+﻿#region Métodos
+
+using System.Web.Security;
 using Data.Controller;
 using Data.Util;
-using System.Web.Security;
+
+#endregion
 
 namespace System.Aplicacao.Account
 {
     public partial class Login : System.Web.UI.Page
     {
-        #region Fields
+        #region Campos
 
+        // Controller
         PessoasC pessoas = PessoasC.GetSingleton();
+
+        // Registro de Logs
         Log log = Log.GetSingleton();
 
         #endregion
 
         protected void Page_Load(object sender, EventArgs e)
         {
-         
         }
 
         protected void LoginButton_Click(object sender, EventArgs e)

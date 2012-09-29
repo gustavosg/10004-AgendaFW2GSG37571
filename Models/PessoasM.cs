@@ -11,7 +11,7 @@ namespace Data.Models
 {
     public class PessoasM : Singleton<PessoasM>
     {
-        #region Fields
+        #region Campos
 
         // Conexão
         ConnectionUtil connection = ConnectionUtil.GetSingleton();
@@ -21,7 +21,7 @@ namespace Data.Models
 
         #endregion
 
-        #region Properties
+        #region Propriedades
 
         public Int16 id { get; set; }
         public String nome { get; set; }
@@ -29,15 +29,16 @@ namespace Data.Models
         public String senha { get; set; }
         public Char sexo { get; set; }
         public Int16 idade { get; set; }
+        public String usuarioLogado { get; set; }
 
         public override String ToString()
         {
-            return "Código: " + this.id + ", Nome: " + this.nome + ", login: " + this.login + ".";
+            return "Nome: " + this.nome + ", login: " + this.login + ".";
         }
 
         #endregion
 
-        #region Methods
+        #region Métodos
 
         /// <summary>
         /// Efetua login do sistema
@@ -45,7 +46,7 @@ namespace Data.Models
         /// <returns>Informa se há um usuário e senha registrados</returns>
         public Boolean Login()
         {
-            String query = "SELECT * FROM PESSOAS WHERE login = '" + this.nome + "' AND senha = '" + this.senha + "'";
+            String query = "SELECT * FROM PESSOAS WHERE login = '" + this.login + "' AND senha = '" + this.senha + "'";
             Boolean hasUser = false;
 
             try
@@ -58,10 +59,13 @@ namespace Data.Models
 
                 connection.CloseConnection();
 
+                if (hasUser)
+                    usuarioLogado = login;
+
             }
             catch (SqlException ex)
             {
-                log.Error("Erro ao efetuar login com o seguinte login: " + this.login + ". Mensagem de erro: " + ex.Message);
+                log.Error("Erro ao efetuar login com o seguinte login: " + this.login + ". Mensagem de erro: " + ex.Message, this.usuarioLogado);
                 throw ex;
             }
 
@@ -84,10 +88,13 @@ namespace Data.Models
                 SqlCommand comando = new SqlCommand(query, conexao);
                 comando.ExecuteNonQuery();
                 connection.CloseConnection();
+
+                log.Info("Pessoa cadastrada com sucesso: " + this.ToString(), this.usuarioLogado);
                 return true;
             }
-            catch (Exception ex)
+            catch (SqlException ex)
             {
+                log.Error("Erro ao cadastrar: " + ex.Message, this.usuarioLogado);
                 throw ex;
             }
         }
@@ -107,32 +114,40 @@ namespace Data.Models
                 comando.ExecuteNonQuery();
 
                 connection.CloseConnection();
-                return true;
             }
-            catch (Exception ex)
+            catch (SqlException ex)
             {
+                log.Error("Erro ao atualizar: " + ex.Message, this.usuarioLogado);
                 throw ex;
             }
+
+            log.Info("Registro atualizado com sucesso: " + this.ToString(), this.usuarioLogado);
+            return true;
         }
 
+        /// <summary>
+        /// Exclui um registro
+        /// </summary>
+        /// <returns>Retorna um valor lógico que informa se o registro foi excluído com sucesso</returns>
         public Boolean Excluir()
         {
             try
             {
                 String query = "DELETE FROM PESSOAS WHERE ID LIKE ('" + this.id + "')";
-                
+
                 SqlConnection conexao = connection.OpenConnection();
                 SqlCommand comando = new SqlCommand(query, conexao);
 
                 comando.ExecuteNonQuery();
-
-                return true;
             }
-            catch (Exception ex)
+            catch (SqlException ex)
             {
-
+                log.Error("Erro ao excluir registro: " + ex.Message, this.usuarioLogado);
                 throw ex;
             }
+
+            log.Info("Registro removido com sucesso: " + this.ToString(), this.usuarioLogado);
+            return true;
         }
 
         /// <summary>
@@ -141,7 +156,7 @@ namespace Data.Models
         /// <returns>Relatório de Pessoas formato SqlDataReader</returns>
         public SqlDataReader ConsultarTodos()
         {
-            SqlDataReader dr;
+            SqlDataReader dataReader;
 
             try
             {
@@ -149,14 +164,15 @@ namespace Data.Models
                 SqlConnection conexao = connection.OpenConnection();
                 SqlCommand comando = new SqlCommand(query, conexao);
 
-                dr = comando.ExecuteReader();
+                dataReader = comando.ExecuteReader();
             }
-            catch (Exception)
+            catch (SqlException ex)
             {
+                log.Error("Erro ao consultar registros! " + ex.Message, this.usuarioLogado);
                 throw;
             }
 
-            return dr;
+            return dataReader;
         }
 
         #endregion

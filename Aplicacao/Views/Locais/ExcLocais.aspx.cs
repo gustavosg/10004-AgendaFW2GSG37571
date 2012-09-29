@@ -76,7 +76,6 @@ namespace System.Aplicacao.Views.Locais
                     Aviso.Text = "Houve erro ao remover, favor consultar log!";
 
             CarregarGridLocais();
-
         }
 
         /// <summary>

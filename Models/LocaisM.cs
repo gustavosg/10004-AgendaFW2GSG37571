@@ -11,15 +11,17 @@ namespace Data.Models
 {
     public class LocaisM : Singleton<LocaisM>
     {
-        #region Fields
+        #region Campos
 
         ConnectionUtil connection = ConnectionUtil.GetSingleton();
 
         Log log = Log.GetSingleton();
 
+        String usuario = PessoasM.GetSingleton().usuarioLogado;
+
         #endregion
 
-        #region Properties
+        #region Propriedades
 
         public Int16 id { get; set; }
         public String nome { get; set; }
@@ -49,13 +51,13 @@ namespace Data.Models
                 comando.ExecuteNonQuery();
                 connection.CloseConnection();
 
-                log.Info("Local atualizado: " + this.ToString(), PessoasM.GetSingleton().login);
+                log.Info("Local atualizado: " + this.ToString(), usuario);
 
                 return true;
             }
             catch (SqlException ex)
             {
-                log.Error(ex.Message, PessoasM.GetSingleton().login);
+                log.Error(ex.Message, usuario);
                 throw ex;
             }
         }
@@ -73,13 +75,13 @@ namespace Data.Models
                 SqlCommand comando = new SqlCommand(query, conexao);
                 comando.ExecuteNonQuery();
 
-                log.Info("Local removido código: " + this.id, PessoasM.GetSingleton().login);
+                log.Info("Local removido código: " + this.id, usuario);
 
                 return true;
             }
             catch (SqlException ex)
             {
-                log.Error("Erro ao remover: " + ex.Message, PessoasM.GetSingleton().login);
+                log.Error("Erro ao remover: " + ex.Message, usuario);
                 throw ex;
             }
         }
@@ -99,12 +101,12 @@ namespace Data.Models
                 comando.ExecuteNonQuery();
                 connection.CloseConnection();
 
-                log.Info("Local gravado com sucesso: " + this.nome, PessoasM.GetSingleton().login);
+                log.Info("Local gravado com sucesso: " + this.nome, usuario);
                 return true;
             }
             catch (SqlException ex)
             {
-                log.Error(ex.Message, PessoasM.GetSingleton().login);
+                log.Error(ex.Message, usuario);
                 throw ex;
             }
         }
@@ -129,7 +131,7 @@ namespace Data.Models
             }
             catch (SqlException ex)
             {
-                log.Error(ex.ToString(), PessoasM.GetSingleton().login);
+                log.Error(ex.ToString(), usuario);
                 throw ex;
             }
         }

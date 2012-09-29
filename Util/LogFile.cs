@@ -32,16 +32,16 @@ namespace Data.Util
             return content;
         }
 
-        public void LogWriter(String level, String user, String message)
+        public void LogWriter(String level, String message, String user)
         {
             String content = LogReader();
             DateTime data = DateTime.UtcNow.ToLocalTime();
 
-            String logFormat = level + " | " + data + " | Usuário: " + user + " | " + message;
+            String logFormat = level + " | " + data + " | " + message + " | Usuário: " + user + ".";
 
             StreamWriter writeFile = new StreamWriter(filename);
             writeFile.WriteLine(content + logFormat);
-            
+
             writeFile.Flush();
             writeFile.Close();
 

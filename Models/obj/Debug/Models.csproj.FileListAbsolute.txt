@@ -10,6 +10,8 @@ D:\Projetos\Visual Studio 2010\Projects\AgendaFW2GSG37571\Models\bin\Debug\Agend
 D:\Projetos\Visual Studio 2010\Projects\AgendaFW2GSG37571\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
 D:\Projetos\Visual Studio 2010\Projects\AgendaFW2GSG37571\Models\obj\Debug\AgendaFW2GSG37571.Data.Models.dll
 D:\Projetos\Visual Studio 2010\Projects\AgendaFW2GSG37571\Models\obj\Debug\AgendaFW2GSG37571.Data.Models.pdb
+D:\Projetos\Visual Studio 2010\Projects\AgendaFW2GSG37571\Models\bin\Debug\AgendaFW2GSG37571.Data.DataConnection.dll
+D:\Projetos\Visual Studio 2010\Projects\AgendaFW2GSG37571\Models\bin\Debug\AgendaFW2GSG37571.Data.DataConnection.pdb
 D:\Projetos\Visual Studio\2010\Projects\AgendaFW2GSG37571\Models\bin\Debug\AgendaFW2GSG37571.Data.Models.dll
 D:\Projetos\Visual Studio\2010\Projects\AgendaFW2GSG37571\Models\bin\Debug\AgendaFW2GSG37571.Data.Models.pdb
 D:\Projetos\Visual Studio\2010\Projects\AgendaFW2GSG37571\Models\bin\Debug\AgendaFW2GSG37571.Data.DataConnection.dll
@@ -19,5 +21,3 @@ D:\Projetos\Visual Studio\2010\Projects\AgendaFW2GSG37571\Models\bin\Debug\Agend
 D:\Projetos\Visual Studio\2010\Projects\AgendaFW2GSG37571\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
 D:\Projetos\Visual Studio\2010\Projects\AgendaFW2GSG37571\Models\obj\Debug\AgendaFW2GSG37571.Data.Models.dll
 D:\Projetos\Visual Studio\2010\Projects\AgendaFW2GSG37571\Models\obj\Debug\AgendaFW2GSG37571.Data.Models.pdb
-D:\Projetos\Visual Studio 2010\Projects\AgendaFW2GSG37571\Models\bin\Debug\AgendaFW2GSG37571.Data.DataConnection.dll
-D:\Projetos\Visual Studio 2010\Projects\AgendaFW2GSG37571\Models\bin\Debug\AgendaFW2GSG37571.Data.DataConnection.pdb
