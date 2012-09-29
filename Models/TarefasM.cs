@@ -1,7 +1,11 @@
-﻿using System;
+﻿#region Referências
+
+using System;
 using System.Data.SqlClient;
 using Data.DataConnection;
 using Data.Util;
+
+#endregion
 
 namespace Data.Models
 {
@@ -9,7 +13,13 @@ namespace Data.Models
     {
         #region Fields
 
+        // Conexão
         ConnectionUtil connection = ConnectionUtil.GetSingleton();
+
+        // Log do sistema
+        Log log = Log.GetSingleton();
+
+        String usuario = PessoasM.GetSingleton().login;
 
         #endregion
 
@@ -18,10 +28,19 @@ namespace Data.Models
         public Int16 id { get; set; }
         public String nome { get; set; }
 
+        public override string ToString()
+        {
+            return "Código: " + this.id + ", Tarefa: " + this.nome + ".";
+        }
+
         #endregion
 
         #region Gravações
 
+        /// <summary>
+        /// Atualiza um registro existente
+        /// </summary>
+        /// <returns>Retorna valor lógico informando se foi atualizado ou não</returns>
         public Boolean Atualizar()
         {
             try
@@ -34,12 +53,13 @@ namespace Data.Models
 
                 connection.CloseConnection();
 
+                log.Info("Registro atualizado com sucesso: " + this.ToString(), usuario);
                 return true;
             }
-            catch (Exception)
+            catch (SqlException ex)
             {
-
-                throw;
+                log.Error("Erro ao atualizar: " + ex.Message, usuario);
+                throw ex;
             }
         }
 
@@ -58,13 +78,16 @@ namespace Data.Models
                 comando.ExecuteNonQuery();
 
                 connection.CloseConnection();
-
-                return true;
             }
-            catch (Exception ex)
+            catch (SqlException ex)
             {
+                log.Error("Exceção ao salvar tarefa: " + ex.Message, usuario);
                 throw ex;
             }
+
+            log.Info("Tarefa salva: " + this.ToString(), usuario);
+
+            return true;
         }
 
         /// <summary>
@@ -80,13 +103,15 @@ namespace Data.Models
                 SqlCommand comando = new SqlCommand(query, conexao);
 
                 comando.ExecuteNonQuery();
-                
             }
-            catch (Exception ex)
+            catch (SqlException ex)
             {
-                
+                log.Error("Exceção ao remover tarefa: " + ex.Message, usuario);
                 throw ex;
             }
+            
+            log.Info("Registro removido: " + this.ToString(), usuario);
+
             return true;
         }
 
@@ -110,8 +135,9 @@ namespace Data.Models
 
                 return dr;
             }
-            catch (Exception ex)
+            catch (SqlException ex)
             {
+                log.Error("Exceção ao consultar dados! " + ex.Message, usuario);
                 throw ex;
             }
         }

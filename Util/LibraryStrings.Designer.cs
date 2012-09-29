@@ -61,7 +61,7 @@ namespace Data.Util {
         }
         
         /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a Depuração.
+        ///   Consulta uma cadeia de caracteres localizada semelhante a DEBUG.
         /// </summary>
         internal static string Debug {
             get {
@@ -70,7 +70,7 @@ namespace Data.Util {
         }
         
         /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a Erro.
+        ///   Consulta uma cadeia de caracteres localizada semelhante a ERROR.
         /// </summary>
         internal static string Error {
             get {
@@ -79,7 +79,7 @@ namespace Data.Util {
         }
         
         /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a Informação.
+        ///   Consulta uma cadeia de caracteres localizada semelhante a INFO.
         /// </summary>
         internal static string Info {
             get {
@@ -88,7 +88,7 @@ namespace Data.Util {
         }
         
         /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a Aviso.
+        ///   Consulta uma cadeia de caracteres localizada semelhante a WARNING.
         /// </summary>
         internal static string Warning {
             get {

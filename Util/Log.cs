@@ -13,17 +13,17 @@ namespace Data.Util
 
         #endregion
 
-        public void Info(String message, String user)
+        public void Info(String message, String user = "")
         {
             gravaLog.LogWriter(LibraryStrings.Info, message, user);
         }
 
-        public void Error(String message, String user)
+        public void Error(String message, String user = "")
         {
             gravaLog.LogWriter(LibraryStrings.Error, message, user);
         }
 
-        public void Debug(String message, String user)
+        public void Debug(String message, String user = "")
         {
             gravaLog.LogWriter(LibraryStrings.Debug, message, user);
         }

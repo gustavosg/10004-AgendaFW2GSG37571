@@ -118,15 +118,15 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Debug" xml:space="preserve">
-    <value>Depuração</value>
+    <value>DEBUG</value>
   </data>
   <data name="Error" xml:space="preserve">
-    <value>Erro</value>
+    <value>ERROR</value>
   </data>
   <data name="Info" xml:space="preserve">
-    <value>Informação</value>
+    <value>INFO</value>
   </data>
   <data name="Warning" xml:space="preserve">
-    <value>Aviso</value>
+    <value>WARNING</value>
   </data>
 </root>

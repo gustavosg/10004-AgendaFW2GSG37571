@@ -26,27 +26,18 @@ namespace System.Aplicacao.Account
 
         protected void LoginButton_Click(object sender, EventArgs e)
         {
-            try
+            if (pessoas.login(Login1.UserName, Login1.Password))
             {
-                if (pessoas.login(Login1.UserName, Login1.Password))
-                {
-                    Session["username"] = Login1.UserName.ToString().Trim();
-                    FormsAuthentication.SetAuthCookie(Session["username"].ToString().Trim(), true);
-                    log.Info("Usuário logado: " + Login1.UserName.Trim(), Login1.UserName.Trim());
-                    FormsAuthentication.RedirectFromLoginPage(Session["username"].ToString(), true);
-                   // Response.Redirect("~/Default.aspx");
-                }
-                else
-                {
-                    Response.Redirect("Account/Login.aspx");
-                }
+                Session["username"] = Login1.UserName.ToString().Trim();
+                FormsAuthentication.SetAuthCookie(Session["username"].ToString().Trim(), true);
+                log.Info("Usuário logado: " + Login1.UserName.Trim(), Login1.UserName.Trim());
+                Response.Redirect("~/Default.aspx");
             }
-            catch (Exception ex)
+            else
             {
-                log.Error("Tentativa de login inválida com o seguinte login: " + Login1.UserName + "\n Segue dados completos: " + ex.Message, "");
-                throw ex;
+                log.Error("Tentativa de login inválida com o seguinte login: ", Login1.UserName.Trim());
+                Response.Redirect("~/Account/Login.aspx");
             }
-
         }
     }
 }

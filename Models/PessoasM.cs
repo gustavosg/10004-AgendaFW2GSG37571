@@ -13,7 +13,11 @@ namespace Data.Models
     {
         #region Fields
 
+        // Conexão
         ConnectionUtil connection = ConnectionUtil.GetSingleton();
+
+        // Registro de Log
+        Log log = Log.GetSingleton();
 
         #endregion
 
@@ -26,35 +30,49 @@ namespace Data.Models
         public Char sexo { get; set; }
         public Int16 idade { get; set; }
 
+        public override String ToString()
+        {
+            return "Código: " + this.id + ", Nome: " + this.nome + ", login: " + this.login + ".";
+        }
+
         #endregion
 
         #region Methods
 
+        /// <summary>
+        /// Efetua login do sistema
+        /// </summary>
+        /// <returns>Informa se há um usuário e senha registrados</returns>
         public Boolean Login()
         {
-
             String query = "SELECT * FROM PESSOAS WHERE login = '" + this.nome + "' AND senha = '" + this.senha + "'";
-            Boolean teste = false;
+            Boolean hasUser = false;
 
             try
             {
-                SqlConnection conexao = connection.OpenConnection();
+                SqlConnection connectionSql = connection.OpenConnection();
 
-                SqlCommand comando = new SqlCommand(query, conexao);
-                SqlDataReader dr = comando.ExecuteReader();
-                teste = dr.HasRows;
+                SqlCommand command = new SqlCommand(query, connectionSql);
+                SqlDataReader dr = command.ExecuteReader();
+                hasUser = dr.HasRows;
 
                 connection.CloseConnection();
 
             }
-            catch (Exception ex)
+            catch (SqlException ex)
             {
+                log.Error("Erro ao efetuar login com o seguinte login: " + this.login + ". Mensagem de erro: " + ex.Message);
                 throw ex;
             }
 
-            return teste;
+            log.Info("Usuario logado: " + this.ToString(), this.login);
+            return hasUser;
         }
 
+        /// <summary>
+        /// Insere um novo registro
+        /// </summary>
+        /// <returns></returns>
         public Boolean Inserir()
         {
             String query = "INSERT INTO PESSOAS (nome, login, senha, sexo, idade) VALUES ('"

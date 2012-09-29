@@ -2,8 +2,6 @@
 using System.IO;
 using System.Text;
 using System.Web;
-using System.Web.SessionState;
-
 
 namespace Data.Util
 {
@@ -39,7 +37,7 @@ namespace Data.Util
             String content = LogReader();
             DateTime data = DateTime.UtcNow.ToLocalTime();
 
-            String logFormat = level + " | " + data + " | " + user + " | " + message;
+            String logFormat = level + " | " + data + " | Usuário: " + user + " | " + message;
 
             StreamWriter writeFile = new StreamWriter(filename);
             writeFile.WriteLine(content + logFormat);
