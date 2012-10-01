@@ -8,7 +8,7 @@ body
     font-family: "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
     margin: 0px;
     padding: 0px;
-    color: #696969;
+    color: Black;
 }
 
 a:link, a:visited
@@ -90,8 +90,8 @@ first child of the left and right table columns */
 
 .page
 {
-    width: 960px;
-    background-color: #fff;
+    width: 1000px;
+    background-color: white;
     margin: 20px auto 0px auto;
     border: 1px solid #496077;
 }
@@ -101,7 +101,10 @@ first child of the left and right table columns */
     position: relative;
     margin: 0px;
     padding: 0px;
-    background: #4b6c9e;
+    text-align: center;
+    vertical-align: middle;
+    
+    background: #000eee;
     width: 100%;
 }
 
@@ -146,7 +149,7 @@ first child of the left and right table columns */
 
 div.hideSkiplink
 {
-    background-color:#3a4f63;
+    background-color:#465c89;
     width:100%;
 }
 
@@ -244,6 +247,7 @@ div.accountInfo
 .clear
 {
     clear: both;
+    
 }
 
 .title

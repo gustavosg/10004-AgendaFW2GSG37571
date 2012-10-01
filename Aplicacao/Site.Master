@@ -14,10 +14,10 @@
     <div class="page">
         <div class="header">
             <div class="title">
-                <h1>
+                <h1 align="center">
                     Trabalho final framework web 2</h1>
             </div>
-            <div class="loginDisplay">
+            <div class="loginDisplay" align="center">
                 <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
                     <AnonymousTemplate>
                         [ <a href="~/Account/Login.aspx" ID="HeadLoginStatus" runat="server">Log In</a> ]
